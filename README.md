@@ -15,7 +15,7 @@ TerraOak is a public repo available to the general audience to showcase the Oak9
 
 ## Scenario
 
-Let's say your a startup and your are creating a saas product for your customers using the following aws resources 
+Lets Build a petstore API using the below resources. 
 
 * elb
 * route53 
