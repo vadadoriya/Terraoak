@@ -20,13 +20,21 @@ TerraOak is a public repo available to the general audience to showcase the Oak9
 
 Lets Build a petstore API using the below resources. 
 
+Phase 1: 
+
+Just the API with a backend dyanmodb table 
+
+Phase 2: We can add a authorizer lambda 
+
+Phase 3: we can create a UI for our petstore so others can also add 
+
+
 * elb
 * route53 
 * cloudfront
 * dyanmodb
 * s3 
 * lambda 
-
 
 ## Getting started
 
@@ -38,6 +46,11 @@ The code in this repo should not be run inside of your company's aws accounts bu
 
 ## Running it inside of a docker container
 
+* pull image from docker hum docker pull oak9/cli
+* pass following env vars to the container 
+    * OAK9_API_KEY
+    * OAK9_PROJECT_ID
+    * OAK9_DIR = "directory of your terraform code"
 
 ## Requirements
 
