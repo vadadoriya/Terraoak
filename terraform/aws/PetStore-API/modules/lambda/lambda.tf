@@ -2,12 +2,12 @@ resource "aws_lambda_function" "PetStoreGet" {
   function_name = "Petstore-Get"
 
   s3_bucket = aws_s3_bucket.lambda_bucket.id
-  s3_key    = aws_s3_object.lambda_hello_world.key
+  s3_key    = aws_s3_object.lambda_pets_set.key
 
-  runtime = "nodejs12.x"
-  handler = "hello.handler"
+  runtime = "python3.9"
+  handler = "lambda.handler"
 
-  source_code_hash = data.archive_file.lambda_hello_world.output_base64sha256
+  source_code_hash = data.archive_file.lambda_pets_get.output_base64sha256
 
   role = aws_iam_role.lambda_exec.arn
 }
@@ -18,8 +18,8 @@ resource "aws_lambda_function" "PetStoreSet" {
   s3_bucket = aws_s3_bucket.lambda_bucket.id
   s3_key    = aws_s3_object.lambda_hello_world.key
 
-  runtime = "nodejs12.x"
-  handler = "hello.handler"
+  runtime = "python3.9"
+  handler = "lambda.handler"
 
   source_code_hash = data.archive_file.lambda_hello_world.output_base64sha256
 
@@ -48,6 +48,7 @@ resource "aws_iam_role" "lambda_exec" {
     ]
   })
 }
+
 
 resource "aws_iam_role_policy_attachment" "lambda_policy" {
   role       = aws_iam_role.lambda_exec.name

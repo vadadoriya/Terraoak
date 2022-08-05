@@ -1,5 +1,5 @@
 resource "random_pet" "lambda_bucket_name" {
-  prefix = "learn-terraform-functions"
+  prefix = "terraform-pet-store"
   length = 4
 }
 
