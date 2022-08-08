@@ -18,23 +18,16 @@ TerraOak is a public repo available to the general audience to showcase the Oak9
 
 ## Scenario
 
-Lets Build a petstore API using the below resources. 
+Lets Build a petstore API using the below resources for a fintech company and a health based company. 
 
-Phase 1: 
-
-Just the API with a backend dyanmodb table 
-
-Phase 2: We can add a authorizer lambda 
-
-Phase 3: we can create a UI for our petstore so others can also add 
-
-
-* elb
-* route53 
-* cloudfront
+* s3
 * dyanmodb
-* s3 
+* api-gateway
 * lambda 
+
+How do we stay secure during the SDLC. 
+How do we make sure that our security posture stays consistent when our architecture changes.
+What value do we gain for continuous validations and design gaps 
 
 ## Getting started
 
@@ -57,3 +50,5 @@ The code in this repo should not be run inside of your company's aws accounts bu
 * Terraform 0.12
 * aws cli
 * local jenkins instance for jenkins integration testing 
+
+## 
