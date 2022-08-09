@@ -45,10 +45,20 @@ The code in this repo should not be run inside of your company's aws accounts bu
     * OAK9_PROJECT_ID
     * OAK9_DIR = "directory of your terraform code"
 
+## Prerequisites
+
 ## Requirements
 
-* Terraform 0.12
-* aws cli
-* local jenkins instance for jenkins integration testing 
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4.0 |
+
 
 ## 
