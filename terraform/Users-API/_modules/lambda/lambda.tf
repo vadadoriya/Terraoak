@@ -1,36 +1,39 @@
-resource "aws_lambda_function" "PetStoreGet" {
+resource "aws_lambda_function" "UsersGet" {
   function_name = "Petstore-Get"
 
-  s3_bucket = aws_s3_bucket.lambda_bucket.id
-  s3_key    = aws_s3_object.lambda_pets_set.key
+
+  s3_bucket = "terraform-webinar-demo-files"
+  s3_key    = "user-store-get.zip"
 
   runtime = "python3.9"
   handler = "lambda.handler"
 
-  source_code_hash = data.archive_file.lambda_pets_get.output_base64sha256
-
+  source_code_hash = var.source_code_hash_get
   role = aws_iam_role.lambda_exec.arn
 }
 
-resource "aws_lambda_function" "PetStoreSet" {
+resource "aws_lambda_function" "UsersSet" {
   function_name = "Petstore-Set"
 
-  s3_bucket = aws_s3_bucket.lambda_bucket.id
-  s3_key    = aws_s3_object.lambda_hello_world.key
+  s3_bucket = "terraform-webinar-demo-files"
+  s3_key =  "user-store-set.zip"
+
 
   runtime = "python3.9"
   handler = "lambda.handler"
 
-  source_code_hash = data.archive_file.lambda_hello_world.output_base64sha256
+  source_code_hash = var.source_code_hash_set
 
   role = aws_iam_role.lambda_exec.arn
 }
 
-resource "aws_cloudwatch_log_group" "hello_world" {
-  name = "/aws/lambda/${aws_lambda_function.hello_world.function_name}"
+resource "aws_cloudwatch_log_group" "lambdaUsersApi" {
+  name = "/aws/lambda/LambdaUsersApi"
 
   retention_in_days = 30
 }
+
+
 
 resource "aws_iam_role" "lambda_exec" {
   name = "serverless_lambda"

@@ -123,11 +123,11 @@
               "type": "string",
               "example": "Hansie"
             },
-            "breed": {
+            "plan": {
               "type": "string",
               "example": "Dachshund"
             },
-            "gender": {
+            "orgid": {
               "type": "string",
               "example": "Male"
             },
@@ -135,7 +135,7 @@
               "type": "string",
               "example": "Mike"
             },
-            "birthday": {
+            "plantype": {
               "type": "string",
               "format": "date",
               "example": "2012-05-15"

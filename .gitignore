@@ -24,6 +24,7 @@ override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
+_backend.tf
 
 # Ignore CLI configuration files
 .terraformrc

@@ -47,12 +47,17 @@ The code in this repo should not be run inside of your company's aws accounts bu
 
 ## Prerequisites
 
+* Ensure your create your backend bucket and table for terraform state file 
+
+https://www.terraform.io/language/settings/backends/s3
+
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.0 |
+
 
 ## Providers
 
