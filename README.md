@@ -63,6 +63,3 @@ https://www.terraform.io/language/settings/backends/s3
 
 Downloading the TerraOak Cli and the instructions on how to run it can be found here, https://docs.oak9.io/oak9/fundamentals/integrations/cli-integration
 
-
-
-
