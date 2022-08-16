@@ -57,7 +57,7 @@ https://www.terraform.io/language/settings/backends/s3
 * Run terraform plan/apply 
 * Add a api user with following command 
 
-`curl "$(terraform output -raw base_url)/set-user?id=0&name=john&orgid=xyx&plan=enterprise&orgname=xyzdfd&creationdate=82322'
+`curl "$(terraform output -raw base_url)/set-user?id=0&name=john&orgid=xyx&plan=enterprise&orgname=xyzdfd&creationdate=82322`
 
 ## Insert 
 
