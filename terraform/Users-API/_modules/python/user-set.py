@@ -17,5 +17,5 @@ def lambda_handler(event, context):
     )
     return {
         'statusCode': response['ResponseMetadata']['HTTPStatusCode'],
-        'body': 'Record ' + str(event['id']) + ' Added'
+        'body': 'Record ' + str(event['queryStringParameters']['id']) + ' Added'
     }

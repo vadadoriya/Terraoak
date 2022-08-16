@@ -6,7 +6,7 @@ TerraOak is Oak9's vulnerable IAC code repo.   This repo will be used for learni
 ## Table of Contents
 
 * [Introduction](#introduction)
-* [Blast Off](#getting-started)
+* [Blast Off](#Getting-Started-Terraform-Code-Execution)
 
 
 ## Introduction 
@@ -18,20 +18,12 @@ TerraOak is a public repo available to the general audience to showcase the Oak9
 
 ## Scenario
 
-Lets Build a petstore API using the below resources for a fintech company and a health based company. 
+Lets Build a Users API using the below resources and secure using Oak9. 
 
 * s3
 * dyanmodb
 * api-gateway
 * lambda 
-
-How do we stay secure during the SDLC. 
-How do we make sure that our security posture stays consistent when our architecture changes.
-What value do we gain for continuous validations and design gaps 
-
-## Getting started
-
-Downloading the TerraOak Cli and the instructions on how to run it can be found here, https://docs.oak9.io/oak9/fundamentals/integrations/cli-integration
 
 ## Terraform Code 
 
@@ -45,12 +37,6 @@ The code in this repo should not be run inside of your company's aws accounts bu
     * OAK9_PROJECT_ID
     * OAK9_DIR = "directory of your terraform code"
 
-## Prerequisites
-
-* Ensure your create your backend bucket and table for terraform state file 
-
-https://www.terraform.io/language/settings/backends/s3
-
 ## Requirements
 
 | Name | Version |
@@ -59,11 +45,24 @@ https://www.terraform.io/language/settings/backends/s3
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.0 |
 
 
-## Providers
+* Ensure your create your backend bucket and table for terraform state file. This config will need to reside in a .tf file in the root directory. 
 
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4.0 |
+https://www.terraform.io/language/settings/backends/s3
+
+## Getting Started Terraform Code Execution
+
+* Download github code locally 
+* Ensure requirements are met 
+* Run terraform init 
+* Run terraform plan/apply 
+* Add a api user with following command 
+
+`curl "$(terraform output -raw base_url)/set-user?id=0&name=john&orgid=xyx&plan=enterprise&orgname=xyzdfd&creationdate=82322'
+
+## Getting Started Oak9 CLI Execution 
+
+Downloading the TerraOak Cli and the instructions on how to run it can be found here, https://docs.oak9.io/oak9/fundamentals/integrations/cli-integration
 
 
-## 
+
+

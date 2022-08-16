@@ -101,7 +101,8 @@ resource "aws_lambda_permission" "allow_api-gateway_get" {
   statement_id  = "AllowExecutionFromApiGateway"
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.UsersGet.function_name
-  principal     = "apigateway.amazonaws.com" 
+  principal     = "apigateway.amazonaws.com"
+  source_arn    =  "${var.api_source_arn}/*/*"
 }
 
 resource "aws_lambda_permission" "allow_api-gateway_set" {
@@ -109,4 +110,5 @@ resource "aws_lambda_permission" "allow_api-gateway_set" {
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.UsersSet.function_name
   principal     = "apigateway.amazonaws.com" 
+  source_arn    = "${var.api_source_arn}/*/*"
 }

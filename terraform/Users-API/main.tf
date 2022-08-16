@@ -21,6 +21,7 @@ module "Lambda" {
     depends_on = [module.lambda_s3_bucket]
     source_code_hash_get = data.archive_file.lambda_users_get.output_base64sha256
     source_code_hash_set= data.archive_file.lambda_users_set.output_base64sha256
+    api_source_arn = module.api_gateway.apigatewayv2_api_execution_arn
 }
 module "lambda_s3_bucket" {
     source = "./_modules/s3"
