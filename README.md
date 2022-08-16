@@ -12,7 +12,7 @@ TerraOak is Oak9's vulnerable IAC code repo.   This repo will be used for learni
 ## Introduction 
 
 Before you proceed, WARNING:
-> :warning: TerraOak is a test repo for creating Vulnerable resources, please use at your own discrention, Oak9 is not responsible for any damages. **DO NOT deploy TerraGoat in a production environment or any AWS accounts that contain sensitive information.**
+> :warning: TerraOak is a test repo for creating Vulnerable resources, please use at your own discrention, Oak9 is not responsible for any damages. **DO NOT deploy TerraOak in a production environment or any AWS accounts that contain sensitive information.**
 
 TerraOak is a public repo available to the general audience to showcase the Oak9 cli in action.  It can be used to test our dynamic blueprint engine to show validate terraform code for design gap security issues.
 
