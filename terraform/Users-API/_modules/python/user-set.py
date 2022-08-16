@@ -7,15 +7,15 @@ def lambda_handler(event, context):
     ddbTable = ddbClient.Table('Users')
     response = ddbTable.put_item(
         Item={
-            'id': event['id'],
-            'name': event['name'],
-            'orgid': event['orgid'],
-            'plan': event['plan'],
-            'orgname': event['orgname'],
-            'creationdate': event['creationdate']
+            'id': int(event['queryStringParameters']['id']),
+            'name': event['queryStringParameters']['name'],
+            'orgid': event['queryStringParameters']['orgid'],
+            'plan': event['queryStringParameters']['plan'],
+            'orgname': event['queryStringParameters']['orgname'],
+            'creationdate': int(event['queryStringParameters']['creationdate'])
         }
     )
     return {
         'statusCode': response['ResponseMetadata']['HTTPStatusCode'],
-        'body': 'Record ' + event['id'] + ' Added'
+        'body': 'Record ' + str(event['id']) + ' Added'
     }

@@ -47,22 +47,23 @@ module "api_gateway" {
 
   create_api_gateway               = true  # to control creation of API Gateway
   create_api_domain_name           = false  # to control creation of API Gateway Domain Name
-  create_default_stage             = false  # to control creation of "$default" stage
-  create_default_stage_api_mapping = false  # to control creation of "$default" stage and API mapping
+  create_default_stage             = true  # to control creation of "$default" stage
+  create_default_stage_api_mapping = true  # to control creation of "$default" stage and API mapping
   create_routes_and_integrations   = true  # to control creation of routes and integrations
   create_vpc_link                  = false  # to control creation of VPC link
 
   # Routes and integrations
   integrations = {
-    "POST /put-pet" = {
+    "GET /get-user" = {
       lambda_arn             = module.Lambda.lambda_arn_UsersGet
       integration_type = "AWS_PROXY"
       payload_format_version = "2.0"
       timeout_milliseconds   = 12000
     }
     
-    "GET /get-pet" = {
+    "POST /set-user" = {
       integration_type = "AWS_PROXY"
+      payload_format_version = "2.0"
       lambda_arn             = module.Lambda.lambda_arn_UsersSet
 
     }

@@ -5,7 +5,7 @@ def lambda_handler(event, context):
     table = client.Table('Users')
     response = table.get_item(
         Key={
-            'id': event['id']
+            'id': int(event['queryStringParameters']['id'])
         }
     )
     if 'Item' in response:
