@@ -17,8 +17,6 @@ data "archive_file" "lambda_users_set" {
   output_path = "${path.module}/_modules/python/user-store-set.zip"
 }
 
-
-
 module "Lambda" {
     source = "./_modules/lambda"
     depends_on = [module.lambda_s3_bucket]
@@ -33,7 +31,6 @@ module "lambda_s3_bucket" {
     sourcec_setusers = data.archive_file.lambda_users_set.output_path
     etagSetUsers=filemd5(data.archive_file.lambda_users_set.output_path)
 }
-
 
 module "dyanmodb" {
     source = "./_modules/dynamoDB"
