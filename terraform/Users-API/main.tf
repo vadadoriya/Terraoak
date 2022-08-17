@@ -1,5 +1,8 @@
 
 
+output "base_url" {
+  value = module.api_gatewayv2.base_url
+}
 data "archive_file" "lambda_users_get" {
   type = "zip"
 

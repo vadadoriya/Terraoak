@@ -14,7 +14,7 @@ TerraOak is Oak9's vulnerable IAC code repo.   This repo will be used for learni
 Before you proceed, WARNING:
 > :warning: TerraOak is a test repo for creating Vulnerable resources, please use at your own discrention, Oak9 is not responsible for any damages. **DO NOT deploy TerraOak in a production environment or any AWS accounts that contain sensitive information.**
 
-TerraOak is a public repo available to the general audience to showcase the Oak9 cli in action.  It can be used to test our dynamic blueprint engine to show validate terraform code for design gap security issues.
+TerraOak is a public repo available to the general audience to showcase the Oak9 cli in action.  It can be used to test our cli against our dynamic blueprint engine to validate design gaps.
 
 ## Scenario
 
@@ -57,9 +57,12 @@ https://www.terraform.io/language/settings/backends/s3
 * Run terraform plan/apply 
 * Add a api user with following command 
 
-`curl "$(terraform output -raw base_url)/set-user?id=0&name=john&orgid=xyx&plan=enterprise&orgname=xyzdfd&creationdate=82322`
+`curl -X POST "$(terraform output -raw base_url)/set-user?id=0&name=john&orgid=xyx&plan=enterprise&orgname=xyzdfd&creationdate=82322"`
 
-## Insert 
+* Retrieve an api user 
+
+`curl "$(terraform output -raw base_url)/get-user?id=0"`
+ 
 
 ## Getting Started Oak9 CLI Execution 
 
