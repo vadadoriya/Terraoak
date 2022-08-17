@@ -21,7 +21,7 @@ resource "aws_apigatewayv2_route" "get-user" {
 
   api_id    = aws_apigatewayv2_api.user_webinar.id
   route_key = "GET /get-user"
-  target = "integrations//${aws_apigatewayv2_integration.get-user.id}"
+  target = "integrations/${aws_apigatewayv2_integration.get-user.id}"
 
 }
 
@@ -29,8 +29,8 @@ resource "aws_apigatewayv2_route" "get-user" {
 resource "aws_apigatewayv2_route" "set-user" {
 
   api_id    = aws_apigatewayv2_api.user_webinar.id
-  route_key = "GET /get-user"
-  target = "integrations//${aws_apigatewayv2_integration.set-user.id}"
+  route_key = "POST /set-user"
+  target = "integrations/${aws_apigatewayv2_integration.set-user.id}"
 
 }
 
