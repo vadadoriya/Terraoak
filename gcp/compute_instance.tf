@@ -12,7 +12,7 @@ resource "google_compute_instance" "instance" {
   }
 
   attached_disk {
-    
+    device_name = "/dev/disk/by-id/google-*"
   }
 
   network_interface {
