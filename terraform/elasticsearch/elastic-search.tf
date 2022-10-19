@@ -4,20 +4,16 @@ resource "aws_elasticsearch_domain" "es" {
   elasticsearch_version = "7.10"
 
   log_publishing_options {
-    # SaC Testing - Severity: High - Set log_publishing_options.enabled to false
     enabled = false
     cloudwatch_log_group_arn = aws_cloudwatch_log_group.example.arn
     log_type                 = "INDEX_SLOW_LOGS"
   }
   node_to_node_encryption {
-    # SaC Testing - Severity: Critical - Set node_to_node_encryption.enabled to false
     enabled = false
   }
 
   cognito_options {
-    # SaC Testing - Severity: High - Set cognito_options.enabled to false
     enabled = false
-    # SaC Testing - Severity: High - Set cognito_options.role_arn to ""
     role_arn = ""
   }
 
@@ -25,18 +21,14 @@ resource "aws_elasticsearch_domain" "es" {
       dedicated_master_enabled = true
       instance_count = 3
       instance_type = "r5.large.elasticsearch"
-      # SaC Testing - Severity: High - Set zone_awareness_enabled to false
       zone_awareness_enabled = false
       zone_awareness_config {
-        # SaC Testing - Severity: High - Set availability_zone_count to 0 
         availability_zone_count = 0
       }
   }
 
   domain_endpoint_options {
-    # SaC Testing - Severity: Critical - Set domain_endpoint_options.tls_security_policy to ""
     tls_security_policy = ""
-    # SaC Testing - Severity : Critical - Set domain_endpoint_options.enforce_https to false
     enforce_https                   = false
     custom_endpoint_enabled         = false
     # custom_endpoint                 = "okta.com"
@@ -44,10 +36,7 @@ resource "aws_elasticsearch_domain" "es" {
   }
 
   vpc_options {
-      # SaC Testing - Severity: High - Set subnet_ids to [""]
       subnet_ids = [""]
-
-      # SaC Testing - Severity: Critical - Set security_group_ids to [""]
       security_group_ids = [""]
   }
 
@@ -57,14 +46,12 @@ resource "aws_elasticsearch_domain" "es" {
   }
 
   encrypt_at_rest {
-    # SaC Testing - Severity: Critical - Set encryption.enabled to false
     enabled    = false
     kms_key_id = ""
   }
   
   advanced_security_options {
     enabled                        = true
-    # SaC Testing - Severity: Critical - Set internal_user_database_enabled to true
     internal_user_database_enabled = true
     master_user_options {
       master_user_arn      = ""
