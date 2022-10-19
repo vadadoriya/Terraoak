@@ -39,7 +39,6 @@ resource "aws_eks_cluster" "demo" {
   role_arn = aws_iam_role.demo-cluster.arn
 
   encryption_config {
-        # SaC Testing - Severity: High - Set resources to ""
         resources = []
         provider {
             key_arn = aws_kms_key.kms_key.arn
@@ -47,7 +46,6 @@ resource "aws_eks_cluster" "demo" {
     }
 
   vpc_config {
-    # SaC Testing - Severity: Critical - Set security_group_ids to ""
     security_group_ids = []
     subnet_ids         = aws_subnet.demo[*].id
   }

@@ -44,17 +44,14 @@ resource "aws_dynamodb_table" "foo" {
     name               = "GameTitleIndex"
     hash_key           = "GameTitle"
     range_key          = "TopScore"
-    # SaC Testing - Severity: Critical - set read_capacity to 0
     read_capacity  = 0 # Must be configured
-    # SaC Testing - Severity: Critical - set write_capacity to 0
     write_capacity = 0 # Must be configured
     projection_type    = "INCLUDE"
     non_key_attributes = ["UserId"]
   }
 
   server_side_encryption {
-    # SaC Testing - Severity: Critical - set server_side_encryption.enabled to false
-    enabled     = false                 # Must be True
+    enabled     = false
     kms_key_arn = "" # Must be configured
   }
 

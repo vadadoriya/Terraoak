@@ -39,9 +39,7 @@ resource "aws_eks_node_group" "demo" {
   subnet_ids      = aws_subnet.demo[*].id
   
   remote_access {
-    # SaC Testing - Severity: Critical - Set source_security_groups_ids to [""]
     source_security_groups_ids = []
-    # SaC Testing - Severity: Critical - Set ec2_ssh_key to ""
     ec2_ssh_key = ""
   }
 

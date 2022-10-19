@@ -4,9 +4,7 @@ resource "aws_api_gateway_method_settings" "foo" {
   stage_name  = aws_api_gateway_stage.foo.stage_name
   method_path = "*/*"
   settings {
-    # SaC Testing - Severity:Critical - Set cache_data_encrypted  to false, should return a criticial finding
-    cache_data_encrypted   = false # Preferred value True
-    # SaC Testing - Severity:High - Removed ttl - cache_ttl_in_seconds   = 60
+    cache_data_encrypted   = false
     data_trace_enabled     = true
     caching_enabled        = true
     metrics_enabled        = true

@@ -2,12 +2,10 @@ resource "aws_s3_bucket" "foo" {
   bucket_prefix = "foo-bucket"
   # For public bucket: PubilcRead,PublicReadWrite,AuthenticateRead 
   #   And For Private bucket: Private,AuthenticateRead,LogDeliveryWrite,BucketOwnerRead,BucketOwnerFullControl,AwsExecRead
-  # SaC Testing - Severity: Critical - Set Acl to PublicRead Write
   acl                 = "PublicReadWrite"
   acceleration_status = "Enabled"
   force_destroy       = false
   request_payer       = "BucketOwner"
-  # SaC Testing - Severity: Critical - Set object_lock_enabled to false
   object_lock_enabled = false
 
   server_side_encryption_configuration {
@@ -15,8 +13,7 @@ resource "aws_s3_bucket" "foo" {
     rule {
       apply_server_side_encryption_by_default {
         kms_master_key_id = aws_kms_key.foo_S3.arn
-        # SaC Testing - Severity: Critical - Set sse_algorithm to ""
-        sse_algorithm     = "" # aws:kms is preferred
+        sse_algorithm     = ""
       }
     }
   }
@@ -49,24 +46,19 @@ resource "aws_s3_bucket" "foo" {
   }
 
   cors_rule {
-    # SaC Testing - Severity: High - Set allowed_headers to ""
     allowed_headers = ""                           # Must be configured
-    # SaC Testing - Severity: High - Set allowed_headers to ""
     allowed_methods = ""                           # Must be configured
-    # SaC Testing - Severity: High - Set allowed_origins to * 
     allowed_origins = "*"                          # Must be configured
     expose_headers  = ""                           # Must be configured
     max_age_seconds = 3000
   }
 
   logging {
-    # SaC Testing - Severity: Critical - Set target_bucket to ""
     target_bucket = ""
     target_prefix = "log/"
   }
 
   versioning {
-    #SaC Testing - Severity: Critical - Set versioning.enabled to false 
     enabled = false # Must be configured
   }
 
@@ -133,13 +125,9 @@ resource "aws_s3_bucket" "foo" {
 resource "aws_s3_bucket_public_access_block" "foo" {
   # All options # Must be configured # Must be true for private bucket
   bucket = aws_s3_bucket.foo.id
-  # SaC Testing - Severity: Critical - Set block_public_acls to true
   block_public_acls       = false
-  # SaC Testing - Severity: Critical - Set block_public_policy to true
   block_public_policy     = false
-  # SaC Testing - Severity: Critical - Set ignore_public_acls to true
   ignore_public_acls      = false
-  # SaC Testing - Severity: Critical - Set restrict_public_buckets to true
   restrict_public_buckets = false
 }
 
@@ -148,7 +136,6 @@ resource "aws_s3_bucket_object_lock_configuration" "foo" {
 
   rule {
     default_retention {
-      # SaC Testing - Severity: Critical - Set rule.default_retention.year to 0 
       mode = ""
       days = 5
     }

@@ -23,7 +23,6 @@ resource "aws_api_gateway_rest_api_policy" "foo" {
   # All options # Must be configured
   rest_api_id = aws_api_gateway_rest_api.foo.id
 
-  # SaC Testing - Severity: Critical - Set Policy to ""
   policy= ""
 } 
 
@@ -44,8 +43,7 @@ resource "aws_api_gateway_client_certificate" "foo" {
    # Conflicts with certificate arn, certificate name, certificate body, certificate chain, certificate private_key 
    regional_certificate_arn = aws_acm_certificate.foo.arn # Used when endpoint_configuration typs is Regional
 
-   # SaC Testing - Severity: Criticial - Set security_policy to TLS_1_0
-   security_policy = "TLS_1_0" # Preferred value TLS_1_2
+   security_policy = "TLS_1_0"
    mutual_tls_authentication {
      truststore_uri     = "s3://bucket-name/key-name"
      truststore_version = "1"
