@@ -28,7 +28,6 @@ resource "aws_elasticsearch_domain" "es" {
   }
 
   domain_endpoint_options {
-    tls_security_policy = ""
     enforce_https                   = false
     custom_endpoint_enabled         = false
     # custom_endpoint                 = "okta.com"
