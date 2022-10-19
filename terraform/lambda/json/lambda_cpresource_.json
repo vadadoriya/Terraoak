@@ -1,0 +1,1989 @@
+[
+    {
+        "VPCId": null,
+        "SubnetId": null,
+        "CpResources": [],
+        "ResourceInfo": {
+            "resourceId": "aws_iam_policy.lambda_logging_foo",
+            "resourceName": "lambda_logging_foo",
+            "lastScannedOn": "0001-01-01T00:00:00",
+            "resourceType": "aws_iam_policy",
+            "blueprintId": null,
+            "resourceLocation": null,
+            "resourceSubscriptionId": null,
+            "configDictionary": {},
+            "tags": {},
+            "accessories": {},
+            "context": null,
+            "violations": [],
+            "status": "Active"
+        },
+        "Tags": {},
+        "ValidationList": [
+            {
+                "AttributeKey": "description",
+                "AttributeValue": "IAM policy for logging from a lambda",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                "ReferencedLineNumber": "22",
+                "TerraformVariableInfo": {
+                    "Label": "description",
+                    "Name": "description",
+                    "Description": "",
+                    "Type": "description",
+                    "Value": "IAM policy for logging from a lambda",
+                    "Filename": "lambda/lambda_permission.tf",
+                    "LineNumber": "22",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "name",
+                "AttributeValue": "foo_lambda_logging",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                "ReferencedLineNumber": "20",
+                "TerraformVariableInfo": {
+                    "Label": "name",
+                    "Name": "name",
+                    "Description": "",
+                    "Type": "name",
+                    "Value": "foo_lambda_logging",
+                    "Filename": "lambda/lambda_permission.tf",
+                    "LineNumber": "20",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "path",
+                "AttributeValue": "/",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                "ReferencedLineNumber": "21",
+                "TerraformVariableInfo": {
+                    "Label": "path",
+                    "Name": "path",
+                    "Description": "",
+                    "Type": "path",
+                    "Value": "/",
+                    "Filename": "lambda/lambda_permission.tf",
+                    "LineNumber": "21",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "policy",
+                "AttributeValue": "{\n;  \"Version\": \"2012-10-17\",\n;  \"Statement\": [\n;    {\n;      \"Action\": [\n;        \"logs:CreateLogGroup\",\n;        \"logs:CreateLogStream\",\n;        \"logs:PutLogEvents\"\n;      ],\n;      \"Resource\": \"arn:aws:logs:*:*:*\",\n;      \"Effect\": \"Allow\"\n;    },\n;    {\n;        \"Action\": [\n;          \"sqs:SendMessage\",\n;          \"sqs:ReceiveMessage\",\n;          \"sqs:DeleteMessage\",\n;          \"sqs:GetQueueAttributes\"\n;        ],\n;        \"Resource\": \";aws_sqs_queue.foo_lambda.arn;\",\n;        \"Effect\": \"Allow\"\n;    },\n;    {\n;        \"Action\": [\n;          \"sns:Publish\"\n;        ],\n;        \"Resource\": \";aws_sns_topic.foo_lambda.arn;\",\n;        \"Effect\": \"Allow\"\n;    }\n;  ]\n;}\n",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                "ReferencedLineNumber": "24",
+                "TerraformVariableInfo": {
+                    "Label": "policy",
+                    "Name": "policy",
+                    "Description": "",
+                    "Type": "policy",
+                    "Value": "{\n;  \"Version\": \"2012-10-17\",\n;  \"Statement\": [\n;    {\n;      \"Action\": [\n;        \"logs:CreateLogGroup\",\n;        \"logs:CreateLogStream\",\n;        \"logs:PutLogEvents\"\n;      ],\n;      \"Resource\": \"arn:aws:logs:*:*:*\",\n;      \"Effect\": \"Allow\"\n;    },\n;    {\n;        \"Action\": [\n;          \"sqs:SendMessage\",\n;          \"sqs:ReceiveMessage\",\n;          \"sqs:DeleteMessage\",\n;          \"sqs:GetQueueAttributes\"\n;        ],\n;        \"Resource\": \";aws_sqs_queue.foo_lambda.arn;\",\n;        \"Effect\": \"Allow\"\n;    },\n;    {\n;        \"Action\": [\n;          \"sns:Publish\"\n;        ],\n;        \"Resource\": \";aws_sns_topic.foo_lambda.arn;\",\n;        \"Effect\": \"Allow\"\n;    }\n;  ]\n;}\n",
+                    "Filename": "lambda/lambda_permission.tf",
+                    "LineNumber": "24",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            }
+        ],
+        "TerraformVariableInfo": {
+            "Label": "resource",
+            "Name": "aws_iam_policy.lambda_logging_foo",
+            "Description": "",
+            "Type": "aws_iam_policy",
+            "Value": "",
+            "Filename": "lambda/lambda_permission.tf",
+            "LineNumber": "19",
+            "StartByteNumber": "",
+            "EndByteNumber": "",
+            "IsVariable": false
+        },
+        "name": "lambda_logging_foo",
+        "uniqueId": "aws_iam_policy-00000000-0000-0000-0000-000000000000",
+        "resourceType": "aws_iam_policy"
+    },
+    {
+        "VPCId": null,
+        "SubnetId": null,
+        "CpResources": [
+            {
+                "VPCId": null,
+                "SubnetId": null,
+                "CpResources": [],
+                "ResourceInfo": {
+                    "resourceId": "aws_iam_role_policy_attachment.AWSLambdaVPCAccessExecutionRole",
+                    "resourceName": "AWSLambdaVPCAccessExecutionRole",
+                    "lastScannedOn": "0001-01-01T00:00:00",
+                    "resourceType": "aws_iam_role_policy_attachment",
+                    "blueprintId": null,
+                    "resourceLocation": null,
+                    "resourceSubscriptionId": null,
+                    "configDictionary": {},
+                    "tags": {},
+                    "accessories": {},
+                    "context": null,
+                    "violations": [],
+                    "status": "Active"
+                },
+                "Tags": {},
+                "ValidationList": [
+                    {
+                        "AttributeKey": "policyarn",
+                        "AttributeValue": "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                        "ReferencedLineNumber": "66",
+                        "TerraformVariableInfo": {
+                            "Label": "policy_arn",
+                            "Name": "policy_arn",
+                            "Description": "",
+                            "Type": "policy_arn",
+                            "Value": "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole",
+                            "Filename": "lambda/lambda_permission.tf",
+                            "LineNumber": "66",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "role",
+                        "AttributeValue": "aws_iam_role.foo_lambda.name",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                        "ReferencedLineNumber": "65",
+                        "TerraformVariableInfo": {
+                            "Label": "role",
+                            "Name": "role",
+                            "Description": "",
+                            "Type": "role",
+                            "Value": "aws_iam_role.foo_lambda.name",
+                            "Filename": "lambda/lambda_permission.tf",
+                            "LineNumber": "65",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    }
+                ],
+                "TerraformVariableInfo": {
+                    "Label": "resource",
+                    "Name": "aws_iam_role_policy_attachment.AWSLambdaVPCAccessExecutionRole",
+                    "Description": "",
+                    "Type": "aws_iam_role_policy_attachment",
+                    "Value": "",
+                    "Filename": "lambda/lambda_permission.tf",
+                    "LineNumber": "64",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                },
+                "name": "AWSLambdaVPCAccessExecutionRole",
+                "uniqueId": "aws_iam_role_policy_attachment.AWSLambdaVPCAccessExecutionRole",
+                "resourceType": "aws_iam_role_policy_attachment"
+            },
+            {
+                "VPCId": null,
+                "SubnetId": null,
+                "CpResources": [],
+                "ResourceInfo": {
+                    "resourceId": "aws_iam_role_policy_attachment.lambda_logs_foo",
+                    "resourceName": "lambda_logs_foo",
+                    "lastScannedOn": "0001-01-01T00:00:00",
+                    "resourceType": "aws_iam_role_policy_attachment",
+                    "blueprintId": null,
+                    "resourceLocation": null,
+                    "resourceSubscriptionId": null,
+                    "configDictionary": {},
+                    "tags": {},
+                    "accessories": {},
+                    "context": null,
+                    "violations": [],
+                    "status": "Active"
+                },
+                "Tags": {},
+                "ValidationList": [
+                    {
+                        "AttributeKey": "policyarn",
+                        "AttributeValue": "aws_iam_policy.lambda_logging_foo.arn",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                        "ReferencedLineNumber": "61",
+                        "TerraformVariableInfo": {
+                            "Label": "policy_arn",
+                            "Name": "policy_arn",
+                            "Description": "",
+                            "Type": "policy_arn",
+                            "Value": "aws_iam_policy.lambda_logging_foo.arn",
+                            "Filename": "lambda/lambda_permission.tf",
+                            "LineNumber": "61",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "role",
+                        "AttributeValue": "aws_iam_role.foo_lambda.name",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                        "ReferencedLineNumber": "60",
+                        "TerraformVariableInfo": {
+                            "Label": "role",
+                            "Name": "role",
+                            "Description": "",
+                            "Type": "role",
+                            "Value": "aws_iam_role.foo_lambda.name",
+                            "Filename": "lambda/lambda_permission.tf",
+                            "LineNumber": "60",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    }
+                ],
+                "TerraformVariableInfo": {
+                    "Label": "resource",
+                    "Name": "aws_iam_role_policy_attachment.lambda_logs_foo",
+                    "Description": "",
+                    "Type": "aws_iam_role_policy_attachment",
+                    "Value": "",
+                    "Filename": "lambda/lambda_permission.tf",
+                    "LineNumber": "59",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                },
+                "name": "lambda_logs_foo",
+                "uniqueId": "aws_iam_role_policy_attachment.lambda_logs_foo",
+                "resourceType": "aws_iam_role_policy_attachment"
+            }
+        ],
+        "ResourceInfo": {
+            "resourceId": "aws_iam_role.foo_lambda",
+            "resourceName": "foo_lambda",
+            "lastScannedOn": "0001-01-01T00:00:00",
+            "resourceType": "aws_iam_role",
+            "blueprintId": null,
+            "resourceLocation": null,
+            "resourceSubscriptionId": null,
+            "configDictionary": {},
+            "tags": {},
+            "accessories": {},
+            "context": null,
+            "violations": [],
+            "status": "Active"
+        },
+        "Tags": {},
+        "ValidationList": [
+            {
+                "AttributeKey": "assumerolepolicy",
+                "AttributeValue": "assume_role_policy = jsonencode({\n    Version = \"2012-10-17\"\n    Statement = [\n      {\n        Action = \"sts:AssumeRole\"\n        Effect = \"Allow\"\n        Sid    = \"\"\n        Principal = {\n          Service = \"lambda.amazonaws.com\"\n        }\n      },\n    ]\n  })",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                "ReferencedLineNumber": "4",
+                "TerraformVariableInfo": {
+                    "Label": "assume_role_policy",
+                    "Name": "assume_role_policy",
+                    "Description": "",
+                    "Type": "assume_role_policy",
+                    "Value": "assume_role_policy = jsonencode({\n    Version = \"2012-10-17\"\n    Statement = [\n      {\n        Action = \"sts:AssumeRole\"\n        Effect = \"Allow\"\n        Sid    = \"\"\n        Principal = {\n          Service = \"lambda.amazonaws.com\"\n        }\n      },\n    ]\n  })",
+                    "Filename": "lambda/lambda_permission.tf",
+                    "LineNumber": "4",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "name",
+                "AttributeValue": "foo_lambda",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                "ReferencedLineNumber": "2",
+                "TerraformVariableInfo": {
+                    "Label": "name",
+                    "Name": "name",
+                    "Description": "",
+                    "Type": "name",
+                    "Value": "foo_lambda",
+                    "Filename": "lambda/lambda_permission.tf",
+                    "LineNumber": "2",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "policyarn",
+                "AttributeValue": "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                "ReferencedLineNumber": "66",
+                "TerraformVariableInfo": {
+                    "Label": "policy_arn",
+                    "Name": "policy_arn",
+                    "Description": "",
+                    "Type": "policy_arn",
+                    "Value": "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole",
+                    "Filename": "lambda/lambda_permission.tf",
+                    "LineNumber": "66",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "role",
+                "AttributeValue": "aws_iam_role.foo_lambda.name",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                "ReferencedLineNumber": "65",
+                "TerraformVariableInfo": {
+                    "Label": "role",
+                    "Name": "role",
+                    "Description": "",
+                    "Type": "role",
+                    "Value": "aws_iam_role.foo_lambda.name",
+                    "Filename": "lambda/lambda_permission.tf",
+                    "LineNumber": "65",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "policyarn",
+                "AttributeValue": "aws_iam_policy.lambda_logging_foo.arn",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                "ReferencedLineNumber": "61",
+                "TerraformVariableInfo": {
+                    "Label": "policy_arn",
+                    "Name": "policy_arn",
+                    "Description": "",
+                    "Type": "policy_arn",
+                    "Value": "aws_iam_policy.lambda_logging_foo.arn",
+                    "Filename": "lambda/lambda_permission.tf",
+                    "LineNumber": "61",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "role",
+                "AttributeValue": "aws_iam_role.foo_lambda.name",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                "ReferencedLineNumber": "60",
+                "TerraformVariableInfo": {
+                    "Label": "role",
+                    "Name": "role",
+                    "Description": "",
+                    "Type": "role",
+                    "Value": "aws_iam_role.foo_lambda.name",
+                    "Filename": "lambda/lambda_permission.tf",
+                    "LineNumber": "60",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            }
+        ],
+        "TerraformVariableInfo": {
+            "Label": "resource",
+            "Name": "aws_iam_role.foo_lambda",
+            "Description": "",
+            "Type": "aws_iam_role",
+            "Value": "",
+            "Filename": "lambda/lambda_permission.tf",
+            "LineNumber": "1",
+            "StartByteNumber": "",
+            "EndByteNumber": "",
+            "IsVariable": false
+        },
+        "name": "foo_lambda",
+        "uniqueId": "aws_iam_role-ebd6e774-ae0a-8406-e0fb-82e10c7a21f4",
+        "resourceType": "aws_iam_role"
+    },
+    {
+        "VPCId": null,
+        "SubnetId": null,
+        "CpResources": [],
+        "ResourceInfo": {
+            "resourceId": "aws_lambda_layer_version_permission.lambda_layer_version_permission",
+            "resourceName": "lambda_layer_version_permission",
+            "lastScannedOn": "0001-01-01T00:00:00",
+            "resourceType": "aws_lambda_layer_version_permission",
+            "blueprintId": null,
+            "resourceLocation": null,
+            "resourceSubscriptionId": null,
+            "configDictionary": {},
+            "tags": {},
+            "accessories": {},
+            "context": null,
+            "violations": [],
+            "status": "Active"
+        },
+        "Tags": {},
+        "ValidationList": [
+            {
+                "AttributeKey": "action",
+                "AttributeValue": "",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_layer-version.tf",
+                "ReferencedLineNumber": "20",
+                "TerraformVariableInfo": {
+                    "Label": "action",
+                    "Name": "action",
+                    "Description": "",
+                    "Type": "action",
+                    "Value": "",
+                    "Filename": "lambda/lambda_layer-version.tf",
+                    "LineNumber": "20",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "layername",
+                "AttributeValue": "aws_lambda_layer_version.bar_lamda.layer_name",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_layer-version.tf",
+                "ReferencedLineNumber": "15",
+                "TerraformVariableInfo": {
+                    "Label": "layer_name",
+                    "Name": "layer_name",
+                    "Description": "",
+                    "Type": "layer_name",
+                    "Value": "aws_lambda_layer_version.bar_lamda.layer_name",
+                    "Filename": "lambda/lambda_layer-version.tf",
+                    "LineNumber": "15",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "principal",
+                "AttributeValue": "*",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_layer-version.tf",
+                "ReferencedLineNumber": "18",
+                "TerraformVariableInfo": {
+                    "Label": "principal",
+                    "Name": "principal",
+                    "Description": "",
+                    "Type": "principal",
+                    "Value": "*",
+                    "Filename": "lambda/lambda_layer-version.tf",
+                    "LineNumber": "18",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "statementid",
+                "AttributeValue": "dev-account",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_layer-version.tf",
+                "ReferencedLineNumber": "21",
+                "TerraformVariableInfo": {
+                    "Label": "statement_id",
+                    "Name": "statement_id",
+                    "Description": "",
+                    "Type": "statement_id",
+                    "Value": "dev-account",
+                    "Filename": "lambda/lambda_layer-version.tf",
+                    "LineNumber": "21",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "versionnumber",
+                "AttributeValue": "1",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_layer-version.tf",
+                "ReferencedLineNumber": "16",
+                "TerraformVariableInfo": {
+                    "Label": "version_number",
+                    "Name": "version_number",
+                    "Description": "",
+                    "Type": "version_number",
+                    "Value": "1",
+                    "Filename": "lambda/lambda_layer-version.tf",
+                    "LineNumber": "16",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            }
+        ],
+        "TerraformVariableInfo": {
+            "Label": "resource",
+            "Name": "aws_lambda_layer_version_permission.lambda_layer_version_permission",
+            "Description": "",
+            "Type": "aws_lambda_layer_version_permission",
+            "Value": "",
+            "Filename": "lambda/lambda_layer-version.tf",
+            "LineNumber": "14",
+            "StartByteNumber": "",
+            "EndByteNumber": "",
+            "IsVariable": false
+        },
+        "name": "lambda_layer_version_permission",
+        "uniqueId": "aws_lambda_layer_version_permission-00000000-0000-0000-0000-000000000000",
+        "resourceType": "aws_lambda_layer_version_permission"
+    },
+    {
+        "VPCId": null,
+        "SubnetId": null,
+        "CpResources": [],
+        "ResourceInfo": {
+            "resourceId": "aws_lambda_provisioned_concurrency_config.lambda_concurrency_config",
+            "resourceName": "lambda_concurrency_config",
+            "lastScannedOn": "0001-01-01T00:00:00",
+            "resourceType": "aws_lambda_provisioned_concurrency_config",
+            "blueprintId": null,
+            "resourceLocation": null,
+            "resourceSubscriptionId": null,
+            "configDictionary": {},
+            "tags": {},
+            "accessories": {},
+            "context": null,
+            "violations": [],
+            "status": "Active"
+        },
+        "Tags": {},
+        "ValidationList": [
+            {
+                "AttributeKey": "functionname",
+                "AttributeValue": "aws_lambda_function.foo.function_name",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_alias.tf",
+                "ReferencedLineNumber": "22",
+                "TerraformVariableInfo": {
+                    "Label": "function_name",
+                    "Name": "function_name",
+                    "Description": "",
+                    "Type": "function_name",
+                    "Value": "aws_lambda_function.foo.function_name",
+                    "Filename": "lambda/lambda_alias.tf",
+                    "LineNumber": "22",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "AWS::Lambda::Version.ProvisionedConcurrencyConfig.ProvisionedConcurrentExecutions",
+                "AttributeValue": "100",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_alias.tf",
+                "ReferencedLineNumber": "24",
+                "TerraformVariableInfo": {
+                    "Label": "provisioned_concurrent_executions",
+                    "Name": "provisioned_concurrent_executions",
+                    "Description": "",
+                    "Type": "provisioned_concurrent_executions",
+                    "Value": "100",
+                    "Filename": "lambda/lambda_alias.tf",
+                    "LineNumber": "24",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "qualifier",
+                "AttributeValue": "aws_lambda_function.foo.version",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "lambda/lambda_alias.tf",
+                "ReferencedLineNumber": "23",
+                "TerraformVariableInfo": {
+                    "Label": "qualifier",
+                    "Name": "qualifier",
+                    "Description": "",
+                    "Type": "qualifier",
+                    "Value": "aws_lambda_function.foo.version",
+                    "Filename": "lambda/lambda_alias.tf",
+                    "LineNumber": "23",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            }
+        ],
+        "TerraformVariableInfo": {
+            "Label": "resource",
+            "Name": "aws_lambda_provisioned_concurrency_config.lambda_concurrency_config",
+            "Description": "",
+            "Type": "aws_lambda_provisioned_concurrency_config",
+            "Value": "",
+            "Filename": "lambda/lambda_alias.tf",
+            "LineNumber": "20",
+            "StartByteNumber": "",
+            "EndByteNumber": "",
+            "IsVariable": false
+        },
+        "name": "lambda_concurrency_config",
+        "uniqueId": "aws_lambda_provisioned_concurrency_config-00000000-0000-0000-0000-000000000000",
+        "resourceType": "aws_lambda_provisioned_concurrency_config"
+    },
+    {
+        "VPCId": null,
+        "SubnetId": null,
+        "CpResources": [
+            {
+                "VPCId": null,
+                "SubnetId": null,
+                "CpResources": [],
+                "ResourceInfo": {
+                    "resourceId": "AWS::Lambda-86a33f7b-0392-870e-5aac-38fc5fe64368",
+                    "resourceName": "lambda_alias",
+                    "lastScannedOn": "2022-10-11T15:52:15.123272Z",
+                    "resourceType": "AWS::Lambda::Alias",
+                    "blueprintId": "bp.component.638011003347357982",
+                    "resourceLocation": null,
+                    "resourceSubscriptionId": null,
+                    "configDictionary": {},
+                    "tags": {},
+                    "accessories": {},
+                    "context": null,
+                    "violations": [],
+                    "status": "Active"
+                },
+                "Tags": {},
+                "ValidationList": [
+                    {
+                        "AttributeKey": "description",
+                        "AttributeValue": "an alias for our foo function",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_alias.tf",
+                        "ReferencedLineNumber": "5",
+                        "TerraformVariableInfo": {
+                            "Label": "description",
+                            "Name": "description",
+                            "Description": "",
+                            "Type": "description",
+                            "Value": "an alias for our foo function",
+                            "Filename": "lambda/lambda_alias.tf",
+                            "LineNumber": "5",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "functionname",
+                        "AttributeValue": "",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_alias.tf",
+                        "ReferencedLineNumber": "7",
+                        "TerraformVariableInfo": {
+                            "Label": "function_name",
+                            "Name": "function_name",
+                            "Description": "",
+                            "Type": "function_name",
+                            "Value": "",
+                            "Filename": "lambda/lambda_alias.tf",
+                            "LineNumber": "7",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "functionversion",
+                        "AttributeValue": "",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_alias.tf",
+                        "ReferencedLineNumber": "9",
+                        "TerraformVariableInfo": {
+                            "Label": "function_version",
+                            "Name": "function_version",
+                            "Description": "",
+                            "Type": "function_version",
+                            "Value": "",
+                            "Filename": "lambda/lambda_alias.tf",
+                            "LineNumber": "9",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "name",
+                        "AttributeValue": "",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_alias.tf",
+                        "ReferencedLineNumber": "4",
+                        "TerraformVariableInfo": {
+                            "Label": "name",
+                            "Name": "name",
+                            "Description": "",
+                            "Type": "name",
+                            "Value": "",
+                            "Filename": "lambda/lambda_alias.tf",
+                            "LineNumber": "4",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    }
+                ],
+                "TerraformVariableInfo": {
+                    "Label": "resource",
+                    "Name": "aws_lambda_alias.lambda_alias",
+                    "Description": "",
+                    "Type": "aws_lambda_alias",
+                    "Value": "",
+                    "Filename": "lambda/lambda_alias.tf",
+                    "LineNumber": "1",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                },
+                "name": "lambda_alias",
+                "uniqueId": "aws_lambda_alias.lambda_alias",
+                "resourceType": "AWS::Lambda::Alias"
+            }
+        ],
+        "ResourceInfo": {
+            "resourceId": null,
+            "resourceName": "AWS::Lambda",
+            "lastScannedOn": "0001-01-01T00:00:00",
+            "resourceType": "AWS::Lambda",
+            "blueprintId": "bp.component.638011003347357982",
+            "resourceLocation": null,
+            "resourceSubscriptionId": null,
+            "configDictionary": {},
+            "tags": {},
+            "accessories": {},
+            "context": null,
+            "violations": [],
+            "status": "Active"
+        },
+        "Tags": {},
+        "ValidationList": [],
+        "TerraformVariableInfo": {
+            "Label": "",
+            "Name": "",
+            "Description": "",
+            "Type": "",
+            "Value": "",
+            "Filename": "",
+            "LineNumber": "",
+            "StartByteNumber": "",
+            "EndByteNumber": "",
+            "IsVariable": false
+        },
+        "name": "lambda_alias",
+        "uniqueId": "AWS::Lambda-86a33f7b-0392-870e-5aac-38fc5fe64368",
+        "resourceType": "AWS::Lambda"
+    },
+    {
+        "VPCId": null,
+        "SubnetId": null,
+        "CpResources": [
+            {
+                "VPCId": null,
+                "SubnetId": null,
+                "CpResources": [],
+                "ResourceInfo": {
+                    "resourceId": "AWS::Lambda-3bf904f9-a068-c7b3-d559-120429e589ee",
+                    "resourceName": "lambda_invoke_config",
+                    "lastScannedOn": "2022-10-11T15:52:15.2913167Z",
+                    "resourceType": "AWS::Lambda::EventInvokeConfig",
+                    "blueprintId": "bp.component.638011003352701161",
+                    "resourceLocation": null,
+                    "resourceSubscriptionId": null,
+                    "configDictionary": {},
+                    "tags": {},
+                    "accessories": {},
+                    "context": null,
+                    "violations": [],
+                    "status": "Active"
+                },
+                "Tags": {},
+                "ValidationList": [
+                    {
+                        "AttributeKey": "FunctionName",
+                        "AttributeValue": "aws_lambda_alias.foo_lambda.function_name",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_event-invoke.tf",
+                        "ReferencedLineNumber": "3",
+                        "TerraformVariableInfo": {
+                            "Label": "function_name",
+                            "Name": "function_name",
+                            "Description": "",
+                            "Type": "function_name",
+                            "Value": "aws_lambda_alias.foo_lambda.function_name",
+                            "Filename": "lambda/lambda_event-invoke.tf",
+                            "LineNumber": "3",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "MaximumEventAgeInSeconds",
+                        "AttributeValue": "60",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_event-invoke.tf",
+                        "ReferencedLineNumber": "4",
+                        "TerraformVariableInfo": {
+                            "Label": "maximum_event_age_in_seconds",
+                            "Name": "maximum_event_age_in_seconds",
+                            "Description": "",
+                            "Type": "maximum_event_age_in_seconds",
+                            "Value": "60",
+                            "Filename": "lambda/lambda_event-invoke.tf",
+                            "LineNumber": "4",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "maximumretryattempts",
+                        "AttributeValue": "0",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_event-invoke.tf",
+                        "ReferencedLineNumber": "5",
+                        "TerraformVariableInfo": {
+                            "Label": "maximum_retry_attempts",
+                            "Name": "maximum_retry_attempts",
+                            "Description": "",
+                            "Type": "maximum_retry_attempts",
+                            "Value": "0",
+                            "Filename": "lambda/lambda_event-invoke.tf",
+                            "LineNumber": "5",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "Qualifier",
+                        "AttributeValue": "$;LATEST",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_event-invoke.tf",
+                        "ReferencedLineNumber": "6",
+                        "TerraformVariableInfo": {
+                            "Label": "qualifier",
+                            "Name": "qualifier",
+                            "Description": "",
+                            "Type": "qualifier",
+                            "Value": "$;LATEST",
+                            "Filename": "lambda/lambda_event-invoke.tf",
+                            "LineNumber": "6",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "destinationconfig.onfailure.destination",
+                        "AttributeValue": "aws_sqs_queue.foo_lambda.arn",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_event-invoke.tf",
+                        "ReferencedLineNumber": "10",
+                        "TerraformVariableInfo": {
+                            "Label": "destination_config.on_failure.destination",
+                            "Name": "destination",
+                            "Description": "",
+                            "Type": "destination_config.on_failure.destination",
+                            "Value": "aws_sqs_queue.foo_lambda.arn",
+                            "Filename": "lambda/lambda_event-invoke.tf",
+                            "LineNumber": "10",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "destinationconfig.onsuccess[0].destination",
+                        "AttributeValue": "aws_sns_topic.foo_lambda.arn",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_event-invoke.tf",
+                        "ReferencedLineNumber": "14",
+                        "TerraformVariableInfo": {
+                            "Label": "destination_config.on_success.destination",
+                            "Name": "destination",
+                            "Description": "",
+                            "Type": "destination_config.on_success.destination",
+                            "Value": "aws_sns_topic.foo_lambda.arn",
+                            "Filename": "lambda/lambda_event-invoke.tf",
+                            "LineNumber": "14",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    }
+                ],
+                "TerraformVariableInfo": {
+                    "Label": "resource",
+                    "Name": "aws_lambda_function_event_invoke_config.lambda_invoke_config",
+                    "Description": "",
+                    "Type": "aws_lambda_function_event_invoke_config",
+                    "Value": "",
+                    "Filename": "lambda/lambda_event-invoke.tf",
+                    "LineNumber": "1",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                },
+                "name": "lambda_invoke_config",
+                "uniqueId": "aws_lambda_function_event_invoke_config.lambda_invoke_config",
+                "resourceType": "AWS::Lambda::EventInvokeConfig"
+            }
+        ],
+        "ResourceInfo": {
+            "resourceId": null,
+            "resourceName": "AWS::Lambda",
+            "lastScannedOn": "0001-01-01T00:00:00",
+            "resourceType": "AWS::Lambda",
+            "blueprintId": "bp.component.638011003352701161",
+            "resourceLocation": null,
+            "resourceSubscriptionId": null,
+            "configDictionary": {},
+            "tags": {},
+            "accessories": {},
+            "context": null,
+            "violations": [],
+            "status": "Active"
+        },
+        "Tags": {},
+        "ValidationList": [],
+        "TerraformVariableInfo": {
+            "Label": "",
+            "Name": "",
+            "Description": "",
+            "Type": "",
+            "Value": "",
+            "Filename": "",
+            "LineNumber": "",
+            "StartByteNumber": "",
+            "EndByteNumber": "",
+            "IsVariable": false
+        },
+        "name": "lambda_invoke_config",
+        "uniqueId": "AWS::Lambda-3bf904f9-a068-c7b3-d559-120429e589ee",
+        "resourceType": "AWS::Lambda"
+    },
+    {
+        "VPCId": null,
+        "SubnetId": null,
+        "CpResources": [
+            {
+                "VPCId": null,
+                "SubnetId": null,
+                "CpResources": [],
+                "ResourceInfo": {
+                    "resourceId": "AWS::Lambda-a08df83c-949e-6282-bec2-4ac26a45af9e",
+                    "resourceName": "example",
+                    "lastScannedOn": "2022-10-11T15:52:15.3413904Z",
+                    "resourceType": "AWS::Lambda::EventSourceMapping",
+                    "blueprintId": "bp.component.638011003353253364",
+                    "resourceLocation": null,
+                    "resourceSubscriptionId": null,
+                    "configDictionary": {},
+                    "tags": {},
+                    "accessories": {},
+                    "context": null,
+                    "violations": [],
+                    "status": "Active"
+                },
+                "Tags": {},
+                "ValidationList": [
+                    {
+                        "AttributeKey": "EventSourceArn",
+                        "AttributeValue": "aws_sqs_queue.foo_lambda.arn",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_alias.tf",
+                        "ReferencedLineNumber": "29",
+                        "TerraformVariableInfo": {
+                            "Label": "event_source_arn",
+                            "Name": "event_source_arn",
+                            "Description": "",
+                            "Type": "event_source_arn",
+                            "Value": "aws_sqs_queue.foo_lambda.arn",
+                            "Filename": "lambda/lambda_alias.tf",
+                            "LineNumber": "29",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "FunctionName",
+                        "AttributeValue": "aws_lambda_function.foo.arn",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_alias.tf",
+                        "ReferencedLineNumber": "30",
+                        "TerraformVariableInfo": {
+                            "Label": "function_name",
+                            "Name": "function_name",
+                            "Description": "",
+                            "Type": "function_name",
+                            "Value": "aws_lambda_function.foo.arn",
+                            "Filename": "lambda/lambda_alias.tf",
+                            "LineNumber": "30",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    }
+                ],
+                "TerraformVariableInfo": {
+                    "Label": "resource",
+                    "Name": "aws_lambda_event_source_mapping.example",
+                    "Description": "",
+                    "Type": "aws_lambda_event_source_mapping",
+                    "Value": "",
+                    "Filename": "lambda/lambda_alias.tf",
+                    "LineNumber": "27",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                },
+                "name": "example",
+                "uniqueId": "aws_lambda_event_source_mapping.example",
+                "resourceType": "AWS::Lambda::EventSourceMapping"
+            }
+        ],
+        "ResourceInfo": {
+            "resourceId": null,
+            "resourceName": "AWS::Lambda",
+            "lastScannedOn": "0001-01-01T00:00:00",
+            "resourceType": "AWS::Lambda",
+            "blueprintId": "bp.component.638011003353253364",
+            "resourceLocation": null,
+            "resourceSubscriptionId": null,
+            "configDictionary": {},
+            "tags": {},
+            "accessories": {},
+            "context": null,
+            "violations": [],
+            "status": "Active"
+        },
+        "Tags": {},
+        "ValidationList": [],
+        "TerraformVariableInfo": {
+            "Label": "",
+            "Name": "",
+            "Description": "",
+            "Type": "",
+            "Value": "",
+            "Filename": "",
+            "LineNumber": "",
+            "StartByteNumber": "",
+            "EndByteNumber": "",
+            "IsVariable": false
+        },
+        "name": "example",
+        "uniqueId": "AWS::Lambda-a08df83c-949e-6282-bec2-4ac26a45af9e",
+        "resourceType": "AWS::Lambda"
+    },
+    {
+        "VPCId": null,
+        "SubnetId": null,
+        "CpResources": [
+            {
+                "VPCId": null,
+                "SubnetId": null,
+                "CpResources": [],
+                "ResourceInfo": {
+                    "resourceId": "aws_lambda_function.oak9_lambda",
+                    "resourceName": "oak9_lambda",
+                    "lastScannedOn": "0001-01-01T00:00:00",
+                    "resourceType": "aws_lambda_function",
+                    "blueprintId": null,
+                    "resourceLocation": null,
+                    "resourceSubscriptionId": null,
+                    "configDictionary": {},
+                    "tags": {},
+                    "accessories": {},
+                    "context": null,
+                    "violations": [],
+                    "status": "Active"
+                },
+                "Tags": {},
+                "ValidationList": [
+                    {
+                        "AttributeKey": "Description",
+                        "AttributeValue": "A lambda function for demonstration",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "41",
+                        "TerraformVariableInfo": {
+                            "Label": "description",
+                            "Name": "description",
+                            "Description": "",
+                            "Type": "description",
+                            "Value": "A lambda function for demonstration",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "41",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "FunctionName",
+                        "AttributeValue": "function_foo",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "3",
+                        "TerraformVariableInfo": {
+                            "Label": "function_name",
+                            "Name": "function_name",
+                            "Description": "",
+                            "Type": "function_name",
+                            "Value": "function_foo",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "3",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "Handler",
+                        "AttributeValue": "index.handler",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "4",
+                        "TerraformVariableInfo": {
+                            "Label": "handler",
+                            "Name": "handler",
+                            "Description": "",
+                            "Type": "handler",
+                            "Value": "index.handler",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "4",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "KmsKeyArn",
+                        "AttributeValue": "aws_kms_key.foo_lambda.arn",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "17",
+                        "TerraformVariableInfo": {
+                            "Label": "kms_key_arn",
+                            "Name": "kms_key_arn",
+                            "Description": "",
+                            "Type": "kms_key_arn",
+                            "Value": "aws_kms_key.foo_lambda.arn",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "17",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "MemorySize",
+                        "AttributeValue": "128",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "9",
+                        "TerraformVariableInfo": {
+                            "Label": "memory_size",
+                            "Name": "memory_size",
+                            "Description": "",
+                            "Type": "memory_size",
+                            "Value": "128",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "9",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "packagetype",
+                        "AttributeValue": "Zip",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "8",
+                        "TerraformVariableInfo": {
+                            "Label": "package_type",
+                            "Name": "package_type",
+                            "Description": "",
+                            "Type": "package_type",
+                            "Value": "Zip",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "8",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "publish",
+                        "AttributeValue": "true",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "7",
+                        "TerraformVariableInfo": {
+                            "Label": "publish",
+                            "Name": "publish",
+                            "Description": "",
+                            "Type": "publish",
+                            "Value": "true",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "7",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "reservedconcurrentexecutions",
+                        "AttributeValue": "",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "10",
+                        "TerraformVariableInfo": {
+                            "Label": "reserved_concurrent_executions",
+                            "Name": "reserved_concurrent_executions",
+                            "Description": "",
+                            "Type": "reserved_concurrent_executions",
+                            "Value": "",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "10",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "Role",
+                        "AttributeValue": "",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "16",
+                        "TerraformVariableInfo": {
+                            "Label": "role",
+                            "Name": "role",
+                            "Description": "",
+                            "Type": "role",
+                            "Value": "",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "16",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "Runtime",
+                        "AttributeValue": "nodejs12.x",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "6",
+                        "TerraformVariableInfo": {
+                            "Label": "runtime",
+                            "Name": "runtime",
+                            "Description": "",
+                            "Type": "runtime",
+                            "Value": "nodejs12.x",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "6",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "Code.S3Bucket",
+                        "AttributeValue": "aws_s3_bucket.foo.id",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "12",
+                        "TerraformVariableInfo": {
+                            "Label": "s3_bucket",
+                            "Name": "s3_bucket",
+                            "Description": "",
+                            "Type": "s3_bucket",
+                            "Value": "aws_s3_bucket.foo.id",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "12",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "Code.S3Key",
+                        "AttributeValue": "aws_s3_bucket_object.foo_file_upload.key",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "13",
+                        "TerraformVariableInfo": {
+                            "Label": "s3_key",
+                            "Name": "s3_key",
+                            "Description": "",
+                            "Type": "s3_key",
+                            "Value": "aws_s3_bucket_object.foo_file_upload.key",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "13",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "s3objectversion",
+                        "AttributeValue": "aws_s3_bucket_object.foo_file_upload.version_id",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "14",
+                        "TerraformVariableInfo": {
+                            "Label": "s3_object_version",
+                            "Name": "s3_object_version",
+                            "Description": "",
+                            "Type": "s3_object_version",
+                            "Value": "aws_s3_bucket_object.foo_file_upload.version_id",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "14",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "sourcecodehash",
+                        "AttributeValue": "",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "19",
+                        "TerraformVariableInfo": {
+                            "Label": "source_code_hash",
+                            "Name": "source_code_hash",
+                            "Description": "",
+                            "Type": "source_code_hash",
+                            "Value": "",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "19",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "Tags[0].Value",
+                        "AttributeValue": "tags = {\n    Name = \"foo function\"\n  }",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "44",
+                        "TerraformVariableInfo": {
+                            "Label": "tags",
+                            "Name": "tags",
+                            "Description": "",
+                            "Type": "tags",
+                            "Value": "tags = {\n    Name = \"foo function\"\n  }",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "44",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "timeout",
+                        "AttributeValue": "180",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "5",
+                        "TerraformVariableInfo": {
+                            "Label": "timeout",
+                            "Name": "timeout",
+                            "Description": "",
+                            "Type": "timeout",
+                            "Value": "180",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "5",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "environment.variables",
+                        "AttributeValue": "variables = {\n      foo = \"bar\"\n    }",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "36",
+                        "TerraformVariableInfo": {
+                            "Label": "environment.variables",
+                            "Name": "variables",
+                            "Description": "",
+                            "Type": "environment.variables",
+                            "Value": "variables = {\n      foo = \"bar\"\n    }",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "36",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "tracingconfig.mode",
+                        "AttributeValue": "Active",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "26",
+                        "TerraformVariableInfo": {
+                            "Label": "tracing_config.mode",
+                            "Name": "mode",
+                            "Description": "",
+                            "Type": "tracing_config.mode",
+                            "Value": "Active",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "26",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "VpcConfig.SecurityGroupIds",
+                        "AttributeValue": "security_group_ids = [\"\"]",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "33",
+                        "TerraformVariableInfo": {
+                            "Label": "vpc_config.security_group_ids",
+                            "Name": "security_group_ids",
+                            "Description": "",
+                            "Type": "vpc_config.security_group_ids",
+                            "Value": "security_group_ids = [\"\"]",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "33",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "VpcConfig.SubnetIds",
+                        "AttributeValue": "subnet_ids         = [aws_subnet.foo_lambda.id]",
+                        "AttributeValueList": [
+                            "aws_subnet.foo_lambda.id"
+                        ],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda.tf",
+                        "ReferencedLineNumber": "31",
+                        "TerraformVariableInfo": {
+                            "Label": "vpc_config.subnet_ids",
+                            "Name": "subnet_ids",
+                            "Description": "",
+                            "Type": "vpc_config.subnet_ids",
+                            "Value": "subnet_ids         = [aws_subnet.foo_lambda.id]",
+                            "Filename": "lambda/lambda.tf",
+                            "LineNumber": "31",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    }
+                ],
+                "TerraformVariableInfo": {
+                    "Label": "resource",
+                    "Name": "aws_lambda_function.oak9_lambda",
+                    "Description": "",
+                    "Type": "aws_lambda_function",
+                    "Value": "",
+                    "Filename": "lambda/lambda.tf",
+                    "LineNumber": "1",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                },
+                "name": "oak9_lambda",
+                "uniqueId": "aws_lambda_function.oak9_lambda",
+                "resourceType": "AWS::Lambda::Function"
+            }
+        ],
+        "ResourceInfo": {
+            "resourceId": null,
+            "resourceName": "AWS::Lambda",
+            "lastScannedOn": "0001-01-01T00:00:00",
+            "resourceType": "AWS::Lambda",
+            "blueprintId": "bp.component.638011003353791626",
+            "resourceLocation": null,
+            "resourceSubscriptionId": null,
+            "configDictionary": {},
+            "tags": {},
+            "accessories": {},
+            "context": null,
+            "violations": [],
+            "status": "Active"
+        },
+        "Tags": {},
+        "ValidationList": [],
+        "TerraformVariableInfo": {
+            "Label": "",
+            "Name": "",
+            "Description": "",
+            "Type": "",
+            "Value": "",
+            "Filename": "",
+            "LineNumber": "",
+            "StartByteNumber": "",
+            "EndByteNumber": "",
+            "IsVariable": false
+        },
+        "name": "oak9_lambda",
+        "uniqueId": "AWS::Lambda-5988c2c0-befd-e173-5b04-8fdcc6ead451",
+        "resourceType": "AWS::Lambda"
+    },
+    {
+        "VPCId": null,
+        "SubnetId": null,
+        "CpResources": [
+            {
+                "VPCId": null,
+                "SubnetId": null,
+                "CpResources": [],
+                "ResourceInfo": {
+                    "resourceId": "aws_lambda_layer_version.lamda_layer_version",
+                    "resourceName": "lamda_layer_version",
+                    "lastScannedOn": "0001-01-01T00:00:00",
+                    "resourceType": "aws_lambda_layer_version",
+                    "blueprintId": null,
+                    "resourceLocation": null,
+                    "resourceSubscriptionId": null,
+                    "configDictionary": {},
+                    "tags": {},
+                    "accessories": {},
+                    "context": null,
+                    "violations": [],
+                    "status": "Active"
+                },
+                "Tags": {},
+                "ValidationList": [
+                    {
+                        "AttributeKey": "compatibleruntimes",
+                        "AttributeValue": "compatible_runtimes = [\"nodejs12.x\"]",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_layer-version.tf",
+                        "ReferencedLineNumber": "6",
+                        "TerraformVariableInfo": {
+                            "Label": "compatible_runtimes",
+                            "Name": "compatible_runtimes",
+                            "Description": "",
+                            "Type": "compatible_runtimes",
+                            "Value": "compatible_runtimes = [\"nodejs12.x\"]",
+                            "Filename": "lambda/lambda_layer-version.tf",
+                            "LineNumber": "6",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "Description",
+                        "AttributeValue": "Provide a security layer on top",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_layer-version.tf",
+                        "ReferencedLineNumber": "5",
+                        "TerraformVariableInfo": {
+                            "Label": "description",
+                            "Name": "description",
+                            "Description": "",
+                            "Type": "description",
+                            "Value": "Provide a security layer on top",
+                            "Filename": "lambda/lambda_layer-version.tf",
+                            "LineNumber": "5",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "LayerName",
+                        "AttributeValue": "bar_lamda",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_layer-version.tf",
+                        "ReferencedLineNumber": "4",
+                        "TerraformVariableInfo": {
+                            "Label": "layer_name",
+                            "Name": "layer_name",
+                            "Description": "",
+                            "Type": "layer_name",
+                            "Value": "bar_lamda",
+                            "Filename": "lambda/lambda_layer-version.tf",
+                            "LineNumber": "4",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "Content.S3Bucket",
+                        "AttributeValue": "aws_s3_bucket.foo.id",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_layer-version.tf",
+                        "ReferencedLineNumber": "7",
+                        "TerraformVariableInfo": {
+                            "Label": "s3_bucket",
+                            "Name": "s3_bucket",
+                            "Description": "",
+                            "Type": "s3_bucket",
+                            "Value": "aws_s3_bucket.foo.id",
+                            "Filename": "lambda/lambda_layer-version.tf",
+                            "LineNumber": "7",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "Content.S3Key",
+                        "AttributeValue": "",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_layer-version.tf",
+                        "ReferencedLineNumber": "9",
+                        "TerraformVariableInfo": {
+                            "Label": "s3_key",
+                            "Name": "s3_key",
+                            "Description": "",
+                            "Type": "s3_key",
+                            "Value": "",
+                            "Filename": "lambda/lambda_layer-version.tf",
+                            "LineNumber": "9",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "s3objectversion",
+                        "AttributeValue": "aws_s3_bucket_object.bar_file_upload.version_id",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_layer-version.tf",
+                        "ReferencedLineNumber": "10",
+                        "TerraformVariableInfo": {
+                            "Label": "s3_object_version",
+                            "Name": "s3_object_version",
+                            "Description": "",
+                            "Type": "s3_object_version",
+                            "Value": "aws_s3_bucket_object.bar_file_upload.version_id",
+                            "Filename": "lambda/lambda_layer-version.tf",
+                            "LineNumber": "10",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    }
+                ],
+                "TerraformVariableInfo": {
+                    "Label": "resource",
+                    "Name": "aws_lambda_layer_version.lamda_layer_version",
+                    "Description": "",
+                    "Type": "aws_lambda_layer_version",
+                    "Value": "",
+                    "Filename": "lambda/lambda_layer-version.tf",
+                    "LineNumber": "1",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                },
+                "name": "lamda_layer_version",
+                "uniqueId": "aws_lambda_layer_version.lamda_layer_version",
+                "resourceType": "AWS::Lambda::LayerVersion"
+            }
+        ],
+        "ResourceInfo": {
+            "resourceId": null,
+            "resourceName": "AWS::Lambda",
+            "lastScannedOn": "0001-01-01T00:00:00",
+            "resourceType": "AWS::Lambda",
+            "blueprintId": null,
+            "resourceLocation": null,
+            "resourceSubscriptionId": null,
+            "configDictionary": {},
+            "tags": {},
+            "accessories": {},
+            "context": null,
+            "violations": [],
+            "status": "Active"
+        },
+        "Tags": {},
+        "ValidationList": [],
+        "TerraformVariableInfo": {
+            "Label": "",
+            "Name": "",
+            "Description": "",
+            "Type": "",
+            "Value": "",
+            "Filename": "",
+            "LineNumber": "",
+            "StartByteNumber": "",
+            "EndByteNumber": "",
+            "IsVariable": false
+        },
+        "name": "lamda_layer_version",
+        "uniqueId": "AWS::Lambda-671921cd-3080-a121-0821-484a1310a70c",
+        "resourceType": "AWS::Lambda"
+    },
+    {
+        "VPCId": null,
+        "SubnetId": null,
+        "CpResources": [
+            {
+                "VPCId": null,
+                "SubnetId": null,
+                "CpResources": [],
+                "ResourceInfo": {
+                    "resourceId": "aws_lambda_permission.foo_lambda_permission",
+                    "resourceName": "foo_lambda_permission",
+                    "lastScannedOn": "0001-01-01T00:00:00",
+                    "resourceType": "aws_lambda_permission",
+                    "blueprintId": null,
+                    "resourceLocation": null,
+                    "resourceSubscriptionId": null,
+                    "configDictionary": {},
+                    "tags": {},
+                    "accessories": {},
+                    "context": null,
+                    "violations": [],
+                    "status": "Active"
+                },
+                "Tags": {},
+                "ValidationList": [
+                    {
+                        "AttributeKey": "AWS::Lambda::LayerVersionPermission.Action",
+                        "AttributeValue": "lambda:InvokeFunction",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                        "ReferencedLineNumber": "72",
+                        "TerraformVariableInfo": {
+                            "Label": "action",
+                            "Name": "action",
+                            "Description": "",
+                            "Type": "action",
+                            "Value": "lambda:InvokeFunction",
+                            "Filename": "lambda/lambda_permission.tf",
+                            "LineNumber": "72",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "functionname",
+                        "AttributeValue": "aws_lambda_function.foo.function_name",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                        "ReferencedLineNumber": "73",
+                        "TerraformVariableInfo": {
+                            "Label": "function_name",
+                            "Name": "function_name",
+                            "Description": "",
+                            "Type": "function_name",
+                            "Value": "aws_lambda_function.foo.function_name",
+                            "Filename": "lambda/lambda_permission.tf",
+                            "LineNumber": "73",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "AWS::Lambda::LayerVersionPermission.Principal",
+                        "AttributeValue": "*",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                        "ReferencedLineNumber": "75",
+                        "TerraformVariableInfo": {
+                            "Label": "principal",
+                            "Name": "principal",
+                            "Description": "",
+                            "Type": "principal",
+                            "Value": "*",
+                            "Filename": "lambda/lambda_permission.tf",
+                            "LineNumber": "75",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "sourcearn",
+                        "AttributeValue": "aws_sns_topic.foo_lambda.arn",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                        "ReferencedLineNumber": "76",
+                        "TerraformVariableInfo": {
+                            "Label": "source_arn",
+                            "Name": "source_arn",
+                            "Description": "",
+                            "Type": "source_arn",
+                            "Value": "aws_sns_topic.foo_lambda.arn",
+                            "Filename": "lambda/lambda_permission.tf",
+                            "LineNumber": "76",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "statementid",
+                        "AttributeValue": "AllowExecutionFromSNS",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "lambda/lambda_permission.tf",
+                        "ReferencedLineNumber": "71",
+                        "TerraformVariableInfo": {
+                            "Label": "statement_id",
+                            "Name": "statement_id",
+                            "Description": "",
+                            "Type": "statement_id",
+                            "Value": "AllowExecutionFromSNS",
+                            "Filename": "lambda/lambda_permission.tf",
+                            "LineNumber": "71",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    }
+                ],
+                "TerraformVariableInfo": {
+                    "Label": "resource",
+                    "Name": "aws_lambda_permission.foo_lambda_permission",
+                    "Description": "",
+                    "Type": "aws_lambda_permission",
+                    "Value": "",
+                    "Filename": "lambda/lambda_permission.tf",
+                    "LineNumber": "69",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                },
+                "name": "foo_lambda_permission",
+                "uniqueId": "aws_lambda_permission.foo_lambda_permission",
+                "resourceType": "AWS::Lambda::Permission"
+            }
+        ],
+        "ResourceInfo": {
+            "resourceId": null,
+            "resourceName": "AWS::Lambda",
+            "lastScannedOn": "0001-01-01T00:00:00",
+            "resourceType": "AWS::Lambda",
+            "blueprintId": null,
+            "resourceLocation": null,
+            "resourceSubscriptionId": null,
+            "configDictionary": {},
+            "tags": {},
+            "accessories": {},
+            "context": null,
+            "violations": [],
+            "status": "Active"
+        },
+        "Tags": {},
+        "ValidationList": [],
+        "TerraformVariableInfo": {
+            "Label": "",
+            "Name": "",
+            "Description": "",
+            "Type": "",
+            "Value": "",
+            "Filename": "",
+            "LineNumber": "",
+            "StartByteNumber": "",
+            "EndByteNumber": "",
+            "IsVariable": false
+        },
+        "name": "foo_lambda_permission",
+        "uniqueId": "AWS::Lambda-02c5ac0e-0ccb-97d9-4468-f0d5cbd7dfb2",
+        "resourceType": "AWS::Lambda"
+    }
+]

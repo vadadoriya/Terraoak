@@ -1,0 +1,45 @@
+[
+    {
+        "CapabilityId": "Oak9.CR.IFE.1",
+        "CapabilityName": "",
+        "Source": "Aws",
+        "ResourceName": "wafv2_web_acl_demo",
+        "ResourceId": "AWS::WAFv2-b1753338-6cbd-9249-5a88-a3c9139dc7f6",
+        "ResourceType": "AWS::WAFv2",
+        "ResourceGap": "Critical",
+        "HasResourceGap": true,
+        "ResourceImpact": "Critical",
+        "HasResourceImpact": true,
+        "Violations": [
+            {
+                "Severity": "Moderate",
+                "HasSeverity": true,
+                "ConfigGap": "",
+                "HasConfigGap": true,
+                "CapabilityId": "Oak9.CR.IFE.1",
+                "HasCapabilityId": true,
+                "ResourceId": "AWS::WAFv2-b1753338-6cbd-9249-5a88-a3c9139dc7f6",
+                "HasResourceId": true,
+                "ResourceType": "AWS::WAFv2",
+                "HasResourceType": true,
+                "ConfigId": "wafv2.web_a_c_l.default_action.block",
+                "HasConfigId": true,
+                "ConfigValue": "",
+                "HasConfigValue": true,
+                "Oak9Guidance": "https://docs.oak9.io/oak9/design-gap-documentation/aws/aws-wafv2#deny-all-communications-and-only-allow-by-exception",
+                "HasOak9Guidance": true,
+                "PrefferedValue": "",
+                "HasPrefferedValue": true,
+                "CapabilityName": "",
+                "HasCapabilityName": true,
+                "ConfigFix": "It is recommended to have default deny rules to avoid allowing unintended requests",
+                "HasConfigFix": true,
+                "ConfigImpact": "",
+                "HasConfigImpact": true
+            }
+        ],
+        "Oak9Guidance": "",
+        "HasOak9Guidance": false,
+        "MappedIndustryFrameworks": []
+    }
+]
