@@ -13,7 +13,7 @@ resource "aws_s3_bucket" "foo" {
     rule {
       apply_server_side_encryption_by_default {
         kms_master_key_id = aws_kms_key.foo_S3.arn
-        sse_algorithm     = ""
+        sse_algorithm     = "aws:kms"
       }
     }
   }
@@ -47,7 +47,7 @@ resource "aws_s3_bucket" "foo" {
 
   cors_rule {
     allowed_headers = ""                           # Must be configured
-    allowed_methods = ""                           # Must be configured
+    allowed_methods = "GET"                           # Must be configured
     allowed_origins = "*"                          # Must be configured
     expose_headers  = ""                           # Must be configured
     max_age_seconds = 3000

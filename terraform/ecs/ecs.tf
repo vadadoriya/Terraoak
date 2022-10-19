@@ -13,9 +13,9 @@ resource "aws_ecs_task_definition" "test-def" {
   # All options # Must be configured
   family                   = "testapp-task"
   
-  execution_role_arn       = ""
+  execution_role_arn       = "execution_role"
   
-  task_role_arn            = ""
+  task_role_arn            = "task_role"
   
   network_mode             = "awsvpc" #this mode use for fargate
 
@@ -30,7 +30,7 @@ resource "aws_ecs_task_definition" "test-def" {
             efs_volume_configuration {
                 file_system_id= aws_efs_file_system.efs.id
                 root_directory= "/"
-                transit_encryption= "DISABLED"
+                transit_encryption= "ENABLED"
                 transit_encryption_port= 2999
                 # authorization_config {
                 #     access_point_id ="/"
