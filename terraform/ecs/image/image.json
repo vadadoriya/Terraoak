@@ -1,0 +1,51 @@
+[
+  {
+    "name": "testapp",
+    "image": "nginx:latest",
+    "entryPoint": ["/"],
+    "command": ["sleep", "10"],
+    "essential": true,
+    "readonlyRootFilesystem": true,
+    "privileged": true,
+    "user": "oak9",
+    "environment" : [
+      { "name" : "test", "value" : "test" }
+    ],
+    "secrets": [
+      {
+          "name": "test-secret",
+          "valueFrom": "test"
+      }
+    ],
+    "cpu": 1024,
+    "memory": 2048,
+    "memoryReservation": 64,
+    "healthCheck":{
+      "command": ["/"],
+      "interval" : 30,
+      "timeout" : 3,
+      "retries" : 3,
+      "startPeriod" : 1
+    },
+    "networkMode": "awsvpc",
+    "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/testapp",
+          "awslogs-region": "us-east-2",
+          "awslogs-stream-prefix": "ecs"
+        },
+        "secretOptions": [{
+          "name": "test",
+          "valueFrom": "test"
+        }]
+    },
+    "portMappings": [
+      {
+        "containerPort": 80,
+        "hostPort": 80,
+        "protocol": "tcp"
+      }
+    ]
+  }  
+]

@@ -1,0 +1,678 @@
+[
+    {
+        "VPCId": null,
+        "SubnetId": null,
+        "CpResources": [
+            {
+                "VPCId": null,
+                "SubnetId": null,
+                "CpResources": [],
+                "ResourceInfo": {
+                    "resourceId": "aws_elasticsearch_domain.es",
+                    "resourceName": "es",
+                    "lastScannedOn": "0001-01-01T00:00:00",
+                    "resourceType": "aws_elasticsearch_domain",
+                    "blueprintId": null,
+                    "resourceLocation": null,
+                    "resourceSubscriptionId": null,
+                    "configDictionary": {},
+                    "tags": {},
+                    "accessories": {},
+                    "context": null,
+                    "violations": [],
+                    "status": "Active"
+                },
+                "Tags": {},
+                "ValidationList": [
+                    {
+                        "AttributeKey": "AccessPolicies",
+                        "AttributeValue": "{\n;  \"Version\": \"2012-10-17\",\n;  \"Statement\": [\n;     \n;     {\n;      \"Effect\": \"Allow\",\n;      \"Action\": \"sts:AssumeRole\",\n;      \"Principal\": {\n;        \"Service\": [\"es.amazonaws.com\"]\n;      },\n;      \"Resource\": \"arn:aws:es:;data.aws_region.current.name;:;data.aws_caller_identity.current.account_id;:domain/;local.elk_domain;/*\"\n;      }     \n;  ]\n;}\n",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "76",
+                        "TerraformVariableInfo": {
+                            "Label": "access_policies",
+                            "Name": "access_policies",
+                            "Description": "",
+                            "Type": "access_policies",
+                            "Value": "{\n;  \"Version\": \"2012-10-17\",\n;  \"Statement\": [\n;     \n;     {\n;      \"Effect\": \"Allow\",\n;      \"Action\": \"sts:AssumeRole\",\n;      \"Principal\": {\n;        \"Service\": [\"es.amazonaws.com\"]\n;      },\n;      \"Resource\": \"arn:aws:es:;data.aws_region.current.name;:;data.aws_caller_identity.current.account_id;:domain/;local.elk_domain;/*\"\n;      }     \n;  ]\n;}\n",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "76",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "domainname",
+                        "AttributeValue": "local.elk_domain",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "3",
+                        "TerraformVariableInfo": {
+                            "Label": "domain_name",
+                            "Name": "domain_name",
+                            "Description": "",
+                            "Type": "domain_name",
+                            "Value": "local.elk_domain",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "3",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "elasticsearchversion",
+                        "AttributeValue": "7.10",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "4",
+                        "TerraformVariableInfo": {
+                            "Label": "elasticsearch_version",
+                            "Name": "elasticsearch_version",
+                            "Description": "",
+                            "Type": "elasticsearch_version",
+                            "Value": "7.10",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "4",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "Tags",
+                        "AttributeValue": "tags = {\n      Domain = local.elk_domain\n  }",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "97",
+                        "TerraformVariableInfo": {
+                            "Label": "tags",
+                            "Name": "tags",
+                            "Description": "",
+                            "Type": "tags",
+                            "Value": "tags = {\n      Domain = local.elk_domain\n  }",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "97",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "AdvancedSecurityOptions[0].Enabled",
+                        "AttributeValue": "true",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "66",
+                        "TerraformVariableInfo": {
+                            "Label": "advanced_security_options.enabled",
+                            "Name": "enabled",
+                            "Description": "",
+                            "Type": "advanced_security_options.enabled",
+                            "Value": "true",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "66",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "AdvancedSecurityOptions[0].InternalUserDatabaseEnabled",
+                        "AttributeValue": "true",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "68",
+                        "TerraformVariableInfo": {
+                            "Label": "advanced_security_options.internal_user_database_enabled",
+                            "Name": "internal_user_database_enabled",
+                            "Description": "",
+                            "Type": "advanced_security_options.internal_user_database_enabled",
+                            "Value": "true",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "68",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "AdvancedSecurityOptions[0].MasterUserOptions[0].MasterUserARN",
+                        "AttributeValue": "",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "70",
+                        "TerraformVariableInfo": {
+                            "Label": "advanced_security_options.master_user_options.master_user_arn",
+                            "Name": "master_user_arn",
+                            "Description": "",
+                            "Type": "advanced_security_options.master_user_options.master_user_arn",
+                            "Value": "",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "70",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "AdvancedSecurityOptions[0].MasterUserOptions[0].MasterUserName",
+                        "AttributeValue": "var.username",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "71",
+                        "TerraformVariableInfo": {
+                            "Label": "advanced_security_options.master_user_options.master_user_name",
+                            "Name": "master_user_name",
+                            "Description": "",
+                            "Type": "advanced_security_options.master_user_options.master_user_name",
+                            "Value": "var.username",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "71",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": true
+                        }
+                    },
+                    {
+                        "AttributeKey": "AdvancedSecurityOptions[0].MasterUserOptions[0].MasterUserPassword",
+                        "AttributeValue": "var.password",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "72",
+                        "TerraformVariableInfo": {
+                            "Label": "advanced_security_options.master_user_options.master_user_password",
+                            "Name": "master_user_password",
+                            "Description": "",
+                            "Type": "advanced_security_options.master_user_options.master_user_password",
+                            "Value": "var.password",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "72",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": true
+                        }
+                    },
+                    {
+                        "AttributeKey": "clusterconfig.dedicatedmasterenabled",
+                        "AttributeValue": "true",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "25",
+                        "TerraformVariableInfo": {
+                            "Label": "cluster_config.dedicated_master_enabled",
+                            "Name": "dedicated_master_enabled",
+                            "Description": "",
+                            "Type": "cluster_config.dedicated_master_enabled",
+                            "Value": "true",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "25",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "clusterconfig.instancecount",
+                        "AttributeValue": "3",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "26",
+                        "TerraformVariableInfo": {
+                            "Label": "cluster_config.instance_count",
+                            "Name": "instance_count",
+                            "Description": "",
+                            "Type": "cluster_config.instance_count",
+                            "Value": "3",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "26",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "clusterconfig.instancetype",
+                        "AttributeValue": "r5.large.elasticsearch",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "27",
+                        "TerraformVariableInfo": {
+                            "Label": "cluster_config.instance_type",
+                            "Name": "instance_type",
+                            "Description": "",
+                            "Type": "cluster_config.instance_type",
+                            "Value": "r5.large.elasticsearch",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "27",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "ElasticsearchClusterConfig.ZoneAwarenessEnabled",
+                        "AttributeValue": "false",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "29",
+                        "TerraformVariableInfo": {
+                            "Label": "cluster_config.zone_awareness_enabled",
+                            "Name": "zone_awareness_enabled",
+                            "Description": "",
+                            "Type": "cluster_config.zone_awareness_enabled",
+                            "Value": "false",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "29",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "ElasticsearchClusterConfig.ZoneAwarenessConfig.AvailabilityZoneCount",
+                        "AttributeValue": "0",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "32",
+                        "TerraformVariableInfo": {
+                            "Label": "cluster_config.zone_awareness_config.availability_zone_count",
+                            "Name": "availability_zone_count",
+                            "Description": "",
+                            "Type": "cluster_config.zone_awareness_config.availability_zone_count",
+                            "Value": "0",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "32",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "CognitoOptions[0].Enabled",
+                        "AttributeValue": "false",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "19",
+                        "TerraformVariableInfo": {
+                            "Label": "cognito_options.enabled",
+                            "Name": "enabled",
+                            "Description": "",
+                            "Type": "cognito_options.enabled",
+                            "Value": "false",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "19",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "CognitoOptions[0].RoleArn",
+                        "AttributeValue": "",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "21",
+                        "TerraformVariableInfo": {
+                            "Label": "cognito_options.role_arn",
+                            "Name": "role_arn",
+                            "Description": "",
+                            "Type": "cognito_options.role_arn",
+                            "Value": "",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "21",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "domainendpointoptions[0].customendpointenabled",
+                        "AttributeValue": "false",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "41",
+                        "TerraformVariableInfo": {
+                            "Label": "domain_endpoint_options.custom_endpoint_enabled",
+                            "Name": "custom_endpoint_enabled",
+                            "Description": "",
+                            "Type": "domain_endpoint_options.custom_endpoint_enabled",
+                            "Value": "false",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "41",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "DomainEndpointOptions[0].EnforceHTTPS",
+                        "AttributeValue": "false",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "40",
+                        "TerraformVariableInfo": {
+                            "Label": "domain_endpoint_options.enforce_https",
+                            "Name": "enforce_https",
+                            "Description": "",
+                            "Type": "domain_endpoint_options.enforce_https",
+                            "Value": "false",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "40",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "DomainEndpointOptions[0].TLSSecurityPolicy",
+                        "AttributeValue": "",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "38",
+                        "TerraformVariableInfo": {
+                            "Label": "domain_endpoint_options.tls_security_policy",
+                            "Name": "tls_security_policy",
+                            "Description": "",
+                            "Type": "domain_endpoint_options.tls_security_policy",
+                            "Value": "",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "38",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "EBSOptions[0].EBSEnabled",
+                        "AttributeValue": "true",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "55",
+                        "TerraformVariableInfo": {
+                            "Label": "ebs_options.ebs_enabled",
+                            "Name": "ebs_enabled",
+                            "Description": "",
+                            "Type": "ebs_options.ebs_enabled",
+                            "Value": "true",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "55",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "EBSOptions[0].VolumeSize",
+                        "AttributeValue": "10",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "56",
+                        "TerraformVariableInfo": {
+                            "Label": "ebs_options.volume_size",
+                            "Name": "volume_size",
+                            "Description": "",
+                            "Type": "ebs_options.volume_size",
+                            "Value": "10",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "56",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "EncryptionAtRestOptions[0].Enabled",
+                        "AttributeValue": "false",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "61",
+                        "TerraformVariableInfo": {
+                            "Label": "encrypt_at_rest.enabled",
+                            "Name": "enabled",
+                            "Description": "",
+                            "Type": "encrypt_at_rest.enabled",
+                            "Value": "false",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "61",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "EncryptionAtRestOptions[0].KmsKeyId",
+                        "AttributeValue": "",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "62",
+                        "TerraformVariableInfo": {
+                            "Label": "encrypt_at_rest.kms_key_id",
+                            "Name": "kms_key_id",
+                            "Description": "",
+                            "Type": "encrypt_at_rest.kms_key_id",
+                            "Value": "",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "62",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "LogPublishingOptions.patternProperties.[a-zA-Z0-9]+.CloudWatchLogsLogGroupArn",
+                        "AttributeValue": "aws_cloudwatch_log_group.example.arn",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "9",
+                        "TerraformVariableInfo": {
+                            "Label": "log_publishing_options.cloudwatch_log_group_arn",
+                            "Name": "cloudwatch_log_group_arn",
+                            "Description": "",
+                            "Type": "log_publishing_options.cloudwatch_log_group_arn",
+                            "Value": "aws_cloudwatch_log_group.example.arn",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "9",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "LogPublishingOptions.patternProperties.[a-zA-Z0-9]+.Enabled",
+                        "AttributeValue": "false",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "8",
+                        "TerraformVariableInfo": {
+                            "Label": "log_publishing_options.enabled",
+                            "Name": "enabled",
+                            "Description": "",
+                            "Type": "log_publishing_options.enabled",
+                            "Value": "false",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "8",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "logpublishingoptions[0].logtype",
+                        "AttributeValue": "INDEX_SLOW_LOGS",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "10",
+                        "TerraformVariableInfo": {
+                            "Label": "log_publishing_options.log_type",
+                            "Name": "log_type",
+                            "Description": "",
+                            "Type": "log_publishing_options.log_type",
+                            "Value": "INDEX_SLOW_LOGS",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "10",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "NodeToNodeEncryptionOptions[0].Enabled",
+                        "AttributeValue": "false",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "14",
+                        "TerraformVariableInfo": {
+                            "Label": "node_to_node_encryption.enabled",
+                            "Name": "enabled",
+                            "Description": "",
+                            "Type": "node_to_node_encryption.enabled",
+                            "Value": "false",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "14",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "SnapshotOptions[0].AutomatedSnapshotStartHour",
+                        "AttributeValue": "23",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "94",
+                        "TerraformVariableInfo": {
+                            "Label": "snapshot_options.automated_snapshot_start_hour",
+                            "Name": "automated_snapshot_start_hour",
+                            "Description": "",
+                            "Type": "snapshot_options.automated_snapshot_start_hour",
+                            "Value": "23",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "94",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "VPCOptions[0].SecurityGroupIds",
+                        "AttributeValue": "security_group_ids = [\"\"]",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "51",
+                        "TerraformVariableInfo": {
+                            "Label": "vpc_options.security_group_ids",
+                            "Name": "security_group_ids",
+                            "Description": "",
+                            "Type": "vpc_options.security_group_ids",
+                            "Value": "security_group_ids = [\"\"]",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "51",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "VPCOptions[0].SubnetIds",
+                        "AttributeValue": "subnet_ids = [\"\"]",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "elasticsearch/elastic-search.tf",
+                        "ReferencedLineNumber": "48",
+                        "TerraformVariableInfo": {
+                            "Label": "vpc_options.subnet_ids",
+                            "Name": "subnet_ids",
+                            "Description": "",
+                            "Type": "vpc_options.subnet_ids",
+                            "Value": "subnet_ids = [\"\"]",
+                            "Filename": "elasticsearch/elastic-search.tf",
+                            "LineNumber": "48",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    }
+                ],
+                "TerraformVariableInfo": {
+                    "Label": "resource",
+                    "Name": "aws_elasticsearch_domain.es",
+                    "Description": "",
+                    "Type": "aws_elasticsearch_domain",
+                    "Value": "",
+                    "Filename": "elasticsearch/elastic-search.tf",
+                    "LineNumber": "2",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                },
+                "name": "es",
+                "uniqueId": "aws_elasticsearch_domain.es",
+                "resourceType": "AWS::Elasticsearch::Domain"
+            }
+        ],
+        "ResourceInfo": {
+            "resourceId": null,
+            "resourceName": "AWS::Elasticsearch",
+            "lastScannedOn": "0001-01-01T00:00:00",
+            "resourceType": "AWS::Elasticsearch",
+            "blueprintId": "bp.component.638010943739168746",
+            "resourceLocation": null,
+            "resourceSubscriptionId": null,
+            "configDictionary": {},
+            "tags": {},
+            "accessories": {},
+            "context": null,
+            "violations": [],
+            "status": "Active"
+        },
+        "Tags": {},
+        "ValidationList": [],
+        "TerraformVariableInfo": {
+            "Label": "",
+            "Name": "",
+            "Description": "",
+            "Type": "",
+            "Value": "",
+            "Filename": "",
+            "LineNumber": "",
+            "StartByteNumber": "",
+            "EndByteNumber": "",
+            "IsVariable": false
+        },
+        "name": "es",
+        "uniqueId": "AWS::Elasticsearch-b136efe3-828a-3735-c06e-adf31fa82a6a",
+        "resourceType": "AWS::Elasticsearch"
+    }
+]

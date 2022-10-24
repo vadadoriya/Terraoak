@@ -1,0 +1,1371 @@
+[
+    {
+        "VPCId": null,
+        "SubnetId": null,
+        "CpResources": [
+            {
+                "VPCId": null,
+                "SubnetId": null,
+                "CpResources": [
+                    {
+                        "VPCId": null,
+                        "SubnetId": null,
+                        "CpResources": [],
+                        "ResourceInfo": {
+                            "resourceId": "aws_db_proxy_default_target_group.this",
+                            "resourceName": "this",
+                            "lastScannedOn": "0001-01-01T00:00:00",
+                            "resourceType": "aws_db_proxy_default_target_group",
+                            "blueprintId": null,
+                            "resourceLocation": null,
+                            "resourceSubscriptionId": null,
+                            "configDictionary": {},
+                            "tags": {},
+                            "accessories": {},
+                            "context": null,
+                            "violations": [],
+                            "status": "Active"
+                        },
+                        "Tags": {},
+                        "ValidationList": [
+                            {
+                                "AttributeKey": "dbproxyname",
+                                "AttributeValue": "aws_db_proxy.db_proxy.name",
+                                "AttributeValueList": [],
+                                "CriteriaType": 0,
+                                "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                                "ReferencedLineNumber": "71",
+                                "TerraformVariableInfo": {
+                                    "Label": "db_proxy_name",
+                                    "Name": "db_proxy_name",
+                                    "Description": "",
+                                    "Type": "db_proxy_name",
+                                    "Value": "aws_db_proxy.db_proxy.name",
+                                    "Filename": "rds_instance/rds_instance.tf",
+                                    "LineNumber": "71",
+                                    "StartByteNumber": "",
+                                    "EndByteNumber": "",
+                                    "IsVariable": false
+                                }
+                            },
+                            {
+                                "AttributeKey": "connectionpoolconfig.connectionborrowtimeout",
+                                "AttributeValue": "300",
+                                "AttributeValueList": [],
+                                "CriteriaType": 0,
+                                "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                                "ReferencedLineNumber": "73",
+                                "TerraformVariableInfo": {
+                                    "Label": "connection_pool_config.connection_borrow_timeout",
+                                    "Name": "connection_borrow_timeout",
+                                    "Description": "",
+                                    "Type": "connection_pool_config.connection_borrow_timeout",
+                                    "Value": "300",
+                                    "Filename": "rds_instance/rds_instance.tf",
+                                    "LineNumber": "73",
+                                    "StartByteNumber": "",
+                                    "EndByteNumber": "",
+                                    "IsVariable": false
+                                }
+                            },
+                            {
+                                "AttributeKey": "connectionpoolconfig.initquery",
+                                "AttributeValue": "",
+                                "AttributeValueList": [],
+                                "CriteriaType": 0,
+                                "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                                "ReferencedLineNumber": "74",
+                                "TerraformVariableInfo": {
+                                    "Label": "connection_pool_config.init_query",
+                                    "Name": "init_query",
+                                    "Description": "",
+                                    "Type": "connection_pool_config.init_query",
+                                    "Value": "",
+                                    "Filename": "rds_instance/rds_instance.tf",
+                                    "LineNumber": "74",
+                                    "StartByteNumber": "",
+                                    "EndByteNumber": "",
+                                    "IsVariable": false
+                                }
+                            },
+                            {
+                                "AttributeKey": "connectionpoolconfig.maxconnectionspercent",
+                                "AttributeValue": "90",
+                                "AttributeValueList": [],
+                                "CriteriaType": 0,
+                                "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                                "ReferencedLineNumber": "75",
+                                "TerraformVariableInfo": {
+                                    "Label": "connection_pool_config.max_connections_percent",
+                                    "Name": "max_connections_percent",
+                                    "Description": "",
+                                    "Type": "connection_pool_config.max_connections_percent",
+                                    "Value": "90",
+                                    "Filename": "rds_instance/rds_instance.tf",
+                                    "LineNumber": "75",
+                                    "StartByteNumber": "",
+                                    "EndByteNumber": "",
+                                    "IsVariable": false
+                                }
+                            },
+                            {
+                                "AttributeKey": "connectionpoolconfig.maxidleconnectionspercent",
+                                "AttributeValue": "50",
+                                "AttributeValueList": [],
+                                "CriteriaType": 0,
+                                "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                                "ReferencedLineNumber": "76",
+                                "TerraformVariableInfo": {
+                                    "Label": "connection_pool_config.max_idle_connections_percent",
+                                    "Name": "max_idle_connections_percent",
+                                    "Description": "",
+                                    "Type": "connection_pool_config.max_idle_connections_percent",
+                                    "Value": "50",
+                                    "Filename": "rds_instance/rds_instance.tf",
+                                    "LineNumber": "76",
+                                    "StartByteNumber": "",
+                                    "EndByteNumber": "",
+                                    "IsVariable": false
+                                }
+                            },
+                            {
+                                "AttributeKey": "connectionpoolconfig.sessionpinningfilters",
+                                "AttributeValue": "session_pinning_filters      = []",
+                                "AttributeValueList": [],
+                                "CriteriaType": 0,
+                                "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                                "ReferencedLineNumber": "77",
+                                "TerraformVariableInfo": {
+                                    "Label": "connection_pool_config.session_pinning_filters",
+                                    "Name": "session_pinning_filters",
+                                    "Description": "",
+                                    "Type": "connection_pool_config.session_pinning_filters",
+                                    "Value": "session_pinning_filters      = []",
+                                    "Filename": "rds_instance/rds_instance.tf",
+                                    "LineNumber": "77",
+                                    "StartByteNumber": "",
+                                    "EndByteNumber": "",
+                                    "IsVariable": false
+                                }
+                            }
+                        ],
+                        "TerraformVariableInfo": {
+                            "Label": "resource",
+                            "Name": "aws_db_proxy_default_target_group.this",
+                            "Description": "",
+                            "Type": "aws_db_proxy_default_target_group",
+                            "Value": "",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "70",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        },
+                        "name": "this",
+                        "uniqueId": "aws_db_proxy_default_target_group.this",
+                        "resourceType": "aws_db_proxy_default_target_group"
+                    }
+                ],
+                "ResourceInfo": {
+                    "resourceId": "AWS::RDS::DBCluster-e91f6338-09f6-a590-c8e1-4b14b7f20c7b",
+                    "resourceName": "db_proxy",
+                    "lastScannedOn": "2022-10-06T00:02:56.1718747Z",
+                    "resourceType": "AWS::RDS::DBProxy",
+                    "blueprintId": "bp.component.638006113757609591",
+                    "resourceLocation": null,
+                    "resourceSubscriptionId": null,
+                    "configDictionary": {},
+                    "tags": {},
+                    "accessories": {},
+                    "context": null,
+                    "violations": [],
+                    "status": "Active"
+                },
+                "Tags": {},
+                "ValidationList": [
+                    {
+                        "AttributeKey": "debuglogging",
+                        "AttributeValue": "false",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "47",
+                        "TerraformVariableInfo": {
+                            "Label": "debug_logging",
+                            "Name": "debug_logging",
+                            "Description": "",
+                            "Type": "debug_logging",
+                            "Value": "false",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "47",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "enginefamily",
+                        "AttributeValue": "MYSQL",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "48",
+                        "TerraformVariableInfo": {
+                            "Label": "engine_family",
+                            "Name": "engine_family",
+                            "Description": "",
+                            "Type": "engine_family",
+                            "Value": "MYSQL",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "48",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "idleclienttimeout",
+                        "AttributeValue": "1800",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "49",
+                        "TerraformVariableInfo": {
+                            "Label": "idle_client_timeout",
+                            "Name": "idle_client_timeout",
+                            "Description": "",
+                            "Type": "idle_client_timeout",
+                            "Value": "1800",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "49",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "name",
+                        "AttributeValue": "db-proxy",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "46",
+                        "TerraformVariableInfo": {
+                            "Label": "name",
+                            "Name": "name",
+                            "Description": "",
+                            "Type": "name",
+                            "Value": "db-proxy",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "46",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "requiretls",
+                        "AttributeValue": "false",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "51",
+                        "TerraformVariableInfo": {
+                            "Label": "require_tls",
+                            "Name": "require_tls",
+                            "Description": "",
+                            "Type": "require_tls",
+                            "Value": "false",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "51",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "RoleArn",
+                        "AttributeValue": "aws_iam_role.db_proxy_role.arn",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "52",
+                        "TerraformVariableInfo": {
+                            "Label": "role_arn",
+                            "Name": "role_arn",
+                            "Description": "",
+                            "Type": "role_arn",
+                            "Value": "aws_iam_role.db_proxy_role.arn",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "52",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "Tags",
+                        "AttributeValue": "tags = {\n    Name = \"db_proxy\"\n    Env  = \"dev\"\n  }",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "64",
+                        "TerraformVariableInfo": {
+                            "Label": "tags",
+                            "Name": "tags",
+                            "Description": "",
+                            "Type": "tags",
+                            "Value": "tags = {\n    Name = \"db_proxy\"\n    Env  = \"dev\"\n  }",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "64",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "VpcSecurityGroupIds",
+                        "AttributeValue": "vpc_security_group_ids = [aws_security_group.default.id]",
+                        "AttributeValueList": [
+                            "aws_security_group.default.id"
+                        ],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "53",
+                        "TerraformVariableInfo": {
+                            "Label": "vpc_security_group_ids",
+                            "Name": "vpc_security_group_ids",
+                            "Description": "",
+                            "Type": "vpc_security_group_ids",
+                            "Value": "vpc_security_group_ids = [aws_security_group.default.id]",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "53",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "auth.authscheme",
+                        "AttributeValue": "SECRETS",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "57",
+                        "TerraformVariableInfo": {
+                            "Label": "auth.auth_scheme",
+                            "Name": "auth_scheme",
+                            "Description": "",
+                            "Type": "auth.auth_scheme",
+                            "Value": "SECRETS",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "57",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "auth.description",
+                        "AttributeValue": "example",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "58",
+                        "TerraformVariableInfo": {
+                            "Label": "auth.description",
+                            "Name": "description",
+                            "Description": "",
+                            "Type": "auth.description",
+                            "Value": "example",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "58",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "auth.iamauth",
+                        "AttributeValue": "",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "60",
+                        "TerraformVariableInfo": {
+                            "Label": "auth.iam_auth",
+                            "Name": "iam_auth",
+                            "Description": "",
+                            "Type": "auth.iam_auth",
+                            "Value": "",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "60",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "auth.secretarn",
+                        "AttributeValue": "",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "61",
+                        "TerraformVariableInfo": {
+                            "Label": "auth.secret_arn",
+                            "Name": "secret_arn",
+                            "Description": "",
+                            "Type": "auth.secret_arn",
+                            "Value": "",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "61",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "dbproxyname",
+                        "AttributeValue": "aws_db_proxy.db_proxy.name",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "71",
+                        "TerraformVariableInfo": {
+                            "Label": "db_proxy_name",
+                            "Name": "db_proxy_name",
+                            "Description": "",
+                            "Type": "db_proxy_name",
+                            "Value": "aws_db_proxy.db_proxy.name",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "71",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "connectionpoolconfig.connectionborrowtimeout",
+                        "AttributeValue": "300",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "73",
+                        "TerraformVariableInfo": {
+                            "Label": "connection_pool_config.connection_borrow_timeout",
+                            "Name": "connection_borrow_timeout",
+                            "Description": "",
+                            "Type": "connection_pool_config.connection_borrow_timeout",
+                            "Value": "300",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "73",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "connectionpoolconfig.initquery",
+                        "AttributeValue": "",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "74",
+                        "TerraformVariableInfo": {
+                            "Label": "connection_pool_config.init_query",
+                            "Name": "init_query",
+                            "Description": "",
+                            "Type": "connection_pool_config.init_query",
+                            "Value": "",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "74",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "connectionpoolconfig.maxconnectionspercent",
+                        "AttributeValue": "90",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "75",
+                        "TerraformVariableInfo": {
+                            "Label": "connection_pool_config.max_connections_percent",
+                            "Name": "max_connections_percent",
+                            "Description": "",
+                            "Type": "connection_pool_config.max_connections_percent",
+                            "Value": "90",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "75",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "connectionpoolconfig.maxidleconnectionspercent",
+                        "AttributeValue": "50",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "76",
+                        "TerraformVariableInfo": {
+                            "Label": "connection_pool_config.max_idle_connections_percent",
+                            "Name": "max_idle_connections_percent",
+                            "Description": "",
+                            "Type": "connection_pool_config.max_idle_connections_percent",
+                            "Value": "50",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "76",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "connectionpoolconfig.sessionpinningfilters",
+                        "AttributeValue": "session_pinning_filters      = []",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "77",
+                        "TerraformVariableInfo": {
+                            "Label": "connection_pool_config.session_pinning_filters",
+                            "Name": "session_pinning_filters",
+                            "Description": "",
+                            "Type": "connection_pool_config.session_pinning_filters",
+                            "Value": "session_pinning_filters      = []",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "77",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    }
+                ],
+                "TerraformVariableInfo": {
+                    "Label": "resource",
+                    "Name": "aws_db_proxy.db_proxy",
+                    "Description": "",
+                    "Type": "aws_db_proxy",
+                    "Value": "",
+                    "Filename": "rds_instance/rds_instance.tf",
+                    "LineNumber": "45",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                },
+                "name": "db_proxy",
+                "uniqueId": "aws_db_proxy.db_proxy",
+                "resourceType": "AWS::RDS::DBProxy"
+            }
+        ],
+        "ResourceInfo": {
+            "resourceId": null,
+            "resourceName": "AWS::RDS::DBCluster",
+            "lastScannedOn": "0001-01-01T00:00:00",
+            "resourceType": "AWS::RDS::DBCluster",
+            "blueprintId": "bp.component.638006113757609591",
+            "resourceLocation": null,
+            "resourceSubscriptionId": null,
+            "configDictionary": {},
+            "tags": {},
+            "accessories": {},
+            "context": null,
+            "violations": [],
+            "status": "Active"
+        },
+        "Tags": {},
+        "ValidationList": [],
+        "TerraformVariableInfo": {
+            "Label": "",
+            "Name": "",
+            "Description": "",
+            "Type": "",
+            "Value": "",
+            "Filename": "",
+            "LineNumber": "",
+            "StartByteNumber": "",
+            "EndByteNumber": "",
+            "IsVariable": false
+        },
+        "name": "db_proxy",
+        "uniqueId": "AWS::RDS::DBCluster-e91f6338-09f6-a590-c8e1-4b14b7f20c7b",
+        "resourceType": "AWS::RDS::DBCluster"
+    },
+    {
+        "VPCId": null,
+        "SubnetId": null,
+        "CpResources": [],
+        "ResourceInfo": {
+            "resourceId": "aws_iam_role.db_proxy_role",
+            "resourceName": "db_proxy_role",
+            "lastScannedOn": "0001-01-01T00:00:00",
+            "resourceType": "aws_iam_role",
+            "blueprintId": null,
+            "resourceLocation": null,
+            "resourceSubscriptionId": null,
+            "configDictionary": {},
+            "tags": {},
+            "accessories": {},
+            "context": null,
+            "violations": [],
+            "status": "Active"
+        },
+        "Tags": {},
+        "ValidationList": [
+            {
+                "AttributeKey": "assumerolepolicy",
+                "AttributeValue": "assume_role_policy = jsonencode({\n    Version = \"2012-10-17\"\n    Statement = [\n      {\n        Action = \"sts:AssumeRole\"\n        Effect = \"Allow\"\n        Sid    = \"\"\n        Principal = {\n          Service = \"rds.amazonaws.com\"\n        }\n      },\n    ]\n  })",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "rds_instance/iam_role.tf",
+                "ReferencedLineNumber": "24",
+                "TerraformVariableInfo": {
+                    "Label": "assume_role_policy",
+                    "Name": "assume_role_policy",
+                    "Description": "",
+                    "Type": "assume_role_policy",
+                    "Value": "assume_role_policy = jsonencode({\n    Version = \"2012-10-17\"\n    Statement = [\n      {\n        Action = \"sts:AssumeRole\"\n        Effect = \"Allow\"\n        Sid    = \"\"\n        Principal = {\n          Service = \"rds.amazonaws.com\"\n        }\n      },\n    ]\n  })",
+                    "Filename": "rds_instance/iam_role.tf",
+                    "LineNumber": "24",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "name",
+                "AttributeValue": "rds_role",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "rds_instance/iam_role.tf",
+                "ReferencedLineNumber": "23",
+                "TerraformVariableInfo": {
+                    "Label": "name",
+                    "Name": "name",
+                    "Description": "",
+                    "Type": "name",
+                    "Value": "rds_role",
+                    "Filename": "rds_instance/iam_role.tf",
+                    "LineNumber": "23",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "tags",
+                "AttributeValue": "tags = {\n    tag-key = \"tag-value\"\n  }",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "rds_instance/iam_role.tf",
+                "ReferencedLineNumber": "38",
+                "TerraformVariableInfo": {
+                    "Label": "tags",
+                    "Name": "tags",
+                    "Description": "",
+                    "Type": "tags",
+                    "Value": "tags = {\n    tag-key = \"tag-value\"\n  }",
+                    "Filename": "rds_instance/iam_role.tf",
+                    "LineNumber": "38",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            }
+        ],
+        "TerraformVariableInfo": {
+            "Label": "resource",
+            "Name": "aws_iam_role.db_proxy_role",
+            "Description": "",
+            "Type": "aws_iam_role",
+            "Value": "",
+            "Filename": "rds_instance/iam_role.tf",
+            "LineNumber": "22",
+            "StartByteNumber": "",
+            "EndByteNumber": "",
+            "IsVariable": false
+        },
+        "name": "db_proxy_role",
+        "uniqueId": "aws_iam_role-00000000-0000-0000-0000-000000000000",
+        "resourceType": "aws_iam_role"
+    },
+    {
+        "VPCId": null,
+        "SubnetId": null,
+        "CpResources": [],
+        "ResourceInfo": {
+            "resourceId": "aws_iam_role.rds_s3_role",
+            "resourceName": "rds_s3_role",
+            "lastScannedOn": "0001-01-01T00:00:00",
+            "resourceType": "aws_iam_role",
+            "blueprintId": null,
+            "resourceLocation": null,
+            "resourceSubscriptionId": null,
+            "configDictionary": {},
+            "tags": {},
+            "accessories": {},
+            "context": null,
+            "violations": [],
+            "status": "Active"
+        },
+        "Tags": {},
+        "ValidationList": [
+            {
+                "AttributeKey": "assumerolepolicy",
+                "AttributeValue": "assume_role_policy = jsonencode({\n    Version = \"2012-10-17\"\n    Statement = [\n      {\n        Action = \"sts:AssumeRole\"\n        Effect = \"Allow\"\n        Sid    = \"\"\n        Principal = {\n          Service = [\"s3.amazonaws.com\",\"rds.amazonaws.com\"]\n        }\n      }\n    ]\n  })",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "rds_instance/iam_role.tf",
+                "ReferencedLineNumber": "3",
+                "TerraformVariableInfo": {
+                    "Label": "assume_role_policy",
+                    "Name": "assume_role_policy",
+                    "Description": "",
+                    "Type": "assume_role_policy",
+                    "Value": "assume_role_policy = jsonencode({\n    Version = \"2012-10-17\"\n    Statement = [\n      {\n        Action = \"sts:AssumeRole\"\n        Effect = \"Allow\"\n        Sid    = \"\"\n        Principal = {\n          Service = [\"s3.amazonaws.com\",\"rds.amazonaws.com\"]\n        }\n      }\n    ]\n  })",
+                    "Filename": "rds_instance/iam_role.tf",
+                    "LineNumber": "3",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "name",
+                "AttributeValue": "rds_s3_role",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "rds_instance/iam_role.tf",
+                "ReferencedLineNumber": "2",
+                "TerraformVariableInfo": {
+                    "Label": "name",
+                    "Name": "name",
+                    "Description": "",
+                    "Type": "name",
+                    "Value": "rds_s3_role",
+                    "Filename": "rds_instance/iam_role.tf",
+                    "LineNumber": "2",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            },
+            {
+                "AttributeKey": "tags",
+                "AttributeValue": "tags = {\n    tag-key = \"tag-value\"\n  }",
+                "AttributeValueList": [],
+                "CriteriaType": 0,
+                "ReferencedFileLocation": "rds_instance/iam_role.tf",
+                "ReferencedLineNumber": "17",
+                "TerraformVariableInfo": {
+                    "Label": "tags",
+                    "Name": "tags",
+                    "Description": "",
+                    "Type": "tags",
+                    "Value": "tags = {\n    tag-key = \"tag-value\"\n  }",
+                    "Filename": "rds_instance/iam_role.tf",
+                    "LineNumber": "17",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                }
+            }
+        ],
+        "TerraformVariableInfo": {
+            "Label": "resource",
+            "Name": "aws_iam_role.rds_s3_role",
+            "Description": "",
+            "Type": "aws_iam_role",
+            "Value": "",
+            "Filename": "rds_instance/iam_role.tf",
+            "LineNumber": "1",
+            "StartByteNumber": "",
+            "EndByteNumber": "",
+            "IsVariable": false
+        },
+        "name": "rds_s3_role",
+        "uniqueId": "aws_iam_role-00000000-0000-0000-0000-000000000000",
+        "resourceType": "aws_iam_role"
+    },
+    {
+        "VPCId": null,
+        "SubnetId": null,
+        "CpResources": [
+            {
+                "VPCId": null,
+                "SubnetId": null,
+                "CpResources": [],
+                "ResourceInfo": {
+                    "resourceId": "aws_db_instance.default",
+                    "resourceName": "default",
+                    "lastScannedOn": "0001-01-01T00:00:00",
+                    "resourceType": "aws_db_instance",
+                    "blueprintId": null,
+                    "resourceLocation": null,
+                    "resourceSubscriptionId": null,
+                    "configDictionary": {},
+                    "tags": {},
+                    "accessories": {},
+                    "context": null,
+                    "violations": [],
+                    "status": "Active"
+                },
+                "Tags": {},
+                "ValidationList": [
+                    {
+                        "AttributeKey": "allocatedstorage",
+                        "AttributeValue": "10",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "4",
+                        "TerraformVariableInfo": {
+                            "Label": "allocated_storage",
+                            "Name": "allocated_storage",
+                            "Description": "",
+                            "Type": "allocated_storage",
+                            "Value": "10",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "4",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "applyimmediately",
+                        "AttributeValue": "true",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "24",
+                        "TerraformVariableInfo": {
+                            "Label": "apply_immediately",
+                            "Name": "apply_immediately",
+                            "Description": "",
+                            "Type": "apply_immediately",
+                            "Value": "true",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "24",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "availabilityzone",
+                        "AttributeValue": "us-east-2a",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "15",
+                        "TerraformVariableInfo": {
+                            "Label": "availability_zone",
+                            "Name": "availability_zone",
+                            "Description": "",
+                            "Type": "availability_zone",
+                            "Value": "us-east-2a",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "15",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "backupretentionperiod",
+                        "AttributeValue": "5",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "16",
+                        "TerraformVariableInfo": {
+                            "Label": "backup_retention_period",
+                            "Name": "backup_retention_period",
+                            "Description": "",
+                            "Type": "backup_retention_period",
+                            "Value": "5",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "16",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "dbsubnetgroupname",
+                        "AttributeValue": "aws_db_subnet_group.default.id",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "13",
+                        "TerraformVariableInfo": {
+                            "Label": "db_subnet_group_name",
+                            "Name": "db_subnet_group_name",
+                            "Description": "",
+                            "Type": "db_subnet_group_name",
+                            "Value": "aws_db_subnet_group.default.id",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "13",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "deletionprotection",
+                        "AttributeValue": "false",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "27",
+                        "TerraformVariableInfo": {
+                            "Label": "deletion_protection",
+                            "Name": "deletion_protection",
+                            "Description": "",
+                            "Type": "deletion_protection",
+                            "Value": "false",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "27",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "dependson",
+                        "AttributeValue": "depends_on              = [aws_security_group.default]",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "2",
+                        "TerraformVariableInfo": {
+                            "Label": "depends_on",
+                            "Name": "depends_on",
+                            "Description": "",
+                            "Type": "depends_on",
+                            "Value": "depends_on              = [aws_security_group.default]",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "2",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "enabledcloudwatchlogsexports",
+                        "AttributeValue": "enabled_cloudwatch_logs_exports = [\"audit\", \"error\", \"general\", \"slowquery\"]",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "17",
+                        "TerraformVariableInfo": {
+                            "Label": "enabled_cloudwatch_logs_exports",
+                            "Name": "enabled_cloudwatch_logs_exports",
+                            "Description": "",
+                            "Type": "enabled_cloudwatch_logs_exports",
+                            "Value": "enabled_cloudwatch_logs_exports = [\"audit\", \"error\", \"general\", \"slowquery\"]",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "17",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "engine",
+                        "AttributeValue": "postgres",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "5",
+                        "TerraformVariableInfo": {
+                            "Label": "engine",
+                            "Name": "engine",
+                            "Description": "",
+                            "Type": "engine",
+                            "Value": "postgres",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "5",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "engineversion",
+                        "AttributeValue": "9.3",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "7",
+                        "TerraformVariableInfo": {
+                            "Label": "engine_version",
+                            "Name": "engine_version",
+                            "Description": "",
+                            "Type": "engine_version",
+                            "Value": "9.3",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "7",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "finalsnapshotidentifier",
+                        "AttributeValue": "DELETE",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "31",
+                        "TerraformVariableInfo": {
+                            "Label": "final_snapshot_identifier",
+                            "Name": "final_snapshot_identifier",
+                            "Description": "",
+                            "Type": "final_snapshot_identifier",
+                            "Value": "DELETE",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "31",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "iamdatabaseauthenticationenabled",
+                        "AttributeValue": "false",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "29",
+                        "TerraformVariableInfo": {
+                            "Label": "iam_database_authentication_enabled",
+                            "Name": "iam_database_authentication_enabled",
+                            "Description": "",
+                            "Type": "iam_database_authentication_enabled",
+                            "Value": "false",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "29",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "identifier",
+                        "AttributeValue": "var.identifier",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "3",
+                        "TerraformVariableInfo": {
+                            "Label": "identifier",
+                            "Name": "identifier",
+                            "Description": "",
+                            "Type": "identifier",
+                            "Value": "var.identifier",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "3",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": true
+                        }
+                    },
+                    {
+                        "AttributeKey": "instanceclass",
+                        "AttributeValue": "var.instance_class",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "8",
+                        "TerraformVariableInfo": {
+                            "Label": "instance_class",
+                            "Name": "instance_class",
+                            "Description": "",
+                            "Type": "instance_class",
+                            "Value": "var.instance_class",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "8",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": true
+                        }
+                    },
+                    {
+                        "AttributeKey": "kmskeyid",
+                        "AttributeValue": "",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "23",
+                        "TerraformVariableInfo": {
+                            "Label": "kms_key_id",
+                            "Name": "kms_key_id",
+                            "Description": "",
+                            "Type": "kms_key_id",
+                            "Value": "",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "23",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "maxallocatedstorage",
+                        "AttributeValue": "20",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "25",
+                        "TerraformVariableInfo": {
+                            "Label": "max_allocated_storage",
+                            "Name": "max_allocated_storage",
+                            "Description": "",
+                            "Type": "max_allocated_storage",
+                            "Value": "20",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "25",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "name",
+                        "AttributeValue": "var.db_name",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "9",
+                        "TerraformVariableInfo": {
+                            "Label": "name",
+                            "Name": "name",
+                            "Description": "",
+                            "Type": "name",
+                            "Value": "var.db_name",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "9",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": true
+                        }
+                    },
+                    {
+                        "AttributeKey": "parametergroupname",
+                        "AttributeValue": "aws_db_parameter_group.parameter_group.id",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "14",
+                        "TerraformVariableInfo": {
+                            "Label": "parameter_group_name",
+                            "Name": "parameter_group_name",
+                            "Description": "",
+                            "Type": "parameter_group_name",
+                            "Value": "aws_db_parameter_group.parameter_group.id",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "14",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "password",
+                        "AttributeValue": "var.password",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "11",
+                        "TerraformVariableInfo": {
+                            "Label": "password",
+                            "Name": "password",
+                            "Description": "",
+                            "Type": "password",
+                            "Value": "var.password",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "11",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": true
+                        }
+                    },
+                    {
+                        "AttributeKey": "publiclyaccessible",
+                        "AttributeValue": "true",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "21",
+                        "TerraformVariableInfo": {
+                            "Label": "publicly_accessible",
+                            "Name": "publicly_accessible",
+                            "Description": "",
+                            "Type": "publicly_accessible",
+                            "Value": "true",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "21",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "skipfinalsnapshot",
+                        "AttributeValue": "true",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "30",
+                        "TerraformVariableInfo": {
+                            "Label": "skip_final_snapshot",
+                            "Name": "skip_final_snapshot",
+                            "Description": "",
+                            "Type": "skip_final_snapshot",
+                            "Value": "true",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "30",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "storageencrypted",
+                        "AttributeValue": "false",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "19",
+                        "TerraformVariableInfo": {
+                            "Label": "storage_encrypted",
+                            "Name": "storage_encrypted",
+                            "Description": "",
+                            "Type": "storage_encrypted",
+                            "Value": "false",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "19",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "tags",
+                        "AttributeValue": "tags = {\n    Environment = \"dev\"\n    Name   = \"rds_cluster\"\n  }",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "32",
+                        "TerraformVariableInfo": {
+                            "Label": "tags",
+                            "Name": "tags",
+                            "Description": "",
+                            "Type": "tags",
+                            "Value": "tags = {\n    Environment = \"dev\"\n    Name   = \"rds_cluster\"\n  }",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "32",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    },
+                    {
+                        "AttributeKey": "username",
+                        "AttributeValue": "var.username",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "10",
+                        "TerraformVariableInfo": {
+                            "Label": "username",
+                            "Name": "username",
+                            "Description": "",
+                            "Type": "username",
+                            "Value": "var.username",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "10",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": true
+                        }
+                    },
+                    {
+                        "AttributeKey": "vpcsecuritygroupids",
+                        "AttributeValue": "vpc_security_group_ids  = [aws_security_group.default.id]",
+                        "AttributeValueList": [],
+                        "CriteriaType": 0,
+                        "ReferencedFileLocation": "rds_instance/rds_instance.tf",
+                        "ReferencedLineNumber": "12",
+                        "TerraformVariableInfo": {
+                            "Label": "vpc_security_group_ids",
+                            "Name": "vpc_security_group_ids",
+                            "Description": "",
+                            "Type": "vpc_security_group_ids",
+                            "Value": "vpc_security_group_ids  = [aws_security_group.default.id]",
+                            "Filename": "rds_instance/rds_instance.tf",
+                            "LineNumber": "12",
+                            "StartByteNumber": "",
+                            "EndByteNumber": "",
+                            "IsVariable": false
+                        }
+                    }
+                ],
+                "TerraformVariableInfo": {
+                    "Label": "resource",
+                    "Name": "aws_db_instance.default",
+                    "Description": "",
+                    "Type": "aws_db_instance",
+                    "Value": "",
+                    "Filename": "rds_instance/rds_instance.tf",
+                    "LineNumber": "1",
+                    "StartByteNumber": "",
+                    "EndByteNumber": "",
+                    "IsVariable": false
+                },
+                "name": "default",
+                "uniqueId": "aws_db_instance.default",
+                "resourceType": "AWS::RDS::DBInstance"
+            }
+        ],
+        "ResourceInfo": {
+            "resourceId": null,
+            "resourceName": "AWS::RDS::DBInstance",
+            "lastScannedOn": "0001-01-01T00:00:00",
+            "resourceType": "AWS::RDS::DBInstance",
+            "blueprintId": "bp.component.638006113763805279",
+            "resourceLocation": null,
+            "resourceSubscriptionId": null,
+            "configDictionary": {},
+            "tags": {},
+            "accessories": {},
+            "context": null,
+            "violations": [],
+            "status": "Active"
+        },
+        "Tags": {},
+        "ValidationList": [],
+        "TerraformVariableInfo": {
+            "Label": "",
+            "Name": "",
+            "Description": "",
+            "Type": "",
+            "Value": "",
+            "Filename": "",
+            "LineNumber": "",
+            "StartByteNumber": "",
+            "EndByteNumber": "",
+            "IsVariable": false
+        },
+        "name": "default",
+        "uniqueId": "AWS::RDS::DBInstance-b69e3c78-1dd3-ac5b-56a2-65c686168fb9",
+        "resourceType": "AWS::RDS::DBInstance"
+    }
+]
