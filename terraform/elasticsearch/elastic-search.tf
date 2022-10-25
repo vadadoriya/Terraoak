@@ -36,6 +36,7 @@ resource "aws_elasticsearch_domain" "es" {
 
   vpc_options {
       subnet_ids = [""]
+      # oak9: aws_elasticsearch_domain.vpc_options.subnet_ids does not have VPC subnets defined
       security_group_ids = [""]
   }
 
