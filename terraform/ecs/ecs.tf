@@ -69,7 +69,7 @@ resource "aws_ecs_service" "test-service" {
   network_configuration {
     security_groups  = []
     subnets          = aws_subnet.private.*.id
-    assign_public_ip = "enabled"
+    assign_public_ip = "DISABLED"
   }
 
   load_balancer {
