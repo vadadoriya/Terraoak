@@ -37,6 +37,7 @@ resource "aws_elasticsearch_domain" "es" {
   vpc_options {
       subnet_ids = [""]
       security_group_ids = [""]
+  # oak9: aws_elasticsearch_domain.vpc_options.security_group_ids does not have security groups defined for its VPC
   }
 
   ebs_options {
