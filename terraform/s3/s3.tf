@@ -146,6 +146,7 @@ resource "aws_s3_bucket_inventory" "test" {
   # All options # Must be configured
   bucket = aws_s3_bucket.foo.id
   name   = "EntireBucketDaily"
+  # oak9: s3.bucket.website_configuration.redirect_all_requests_to.host_name host name to which requests should be redirected to is not defined
 
   included_object_versions = "All"
 
