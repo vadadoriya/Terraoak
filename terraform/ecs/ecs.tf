@@ -24,6 +24,7 @@ resource "aws_ecs_task_definition" "test-def" {
   memory                   = 2048
   
   container_definitions    = "${file("${path.module}/templates/image/image.json")}"
+  # oak9: aws_ecs_task_definition.container_definitions is not configured
 
   volume {  
       name = "myEfsVolume"
