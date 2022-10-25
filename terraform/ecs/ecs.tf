@@ -69,6 +69,7 @@ resource "aws_ecs_service" "test-service" {
   network_configuration {
     security_groups  = []
     subnets          = aws_subnet.private.*.id
+    # oak9: aws_ecs_service.network_configuration.subnets is not configured
     assign_public_ip = "DISABLED"
   }
 
