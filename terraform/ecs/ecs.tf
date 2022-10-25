@@ -10,6 +10,7 @@ resource "aws_ecs_cluster" "test-cluster" {
 
 }
 resource "aws_ecs_task_definition" "test-def" {
+  # oak9: ecs.task_definition[0].container_definitions[0].health_check is not configured
   # oak9: ecs.task_definition[0].container_definitions[0].firelens_configuration is not configured
   # All options # Must be configured
   family                   = "testapp-task"
