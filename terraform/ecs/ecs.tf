@@ -76,6 +76,7 @@ resource "aws_ecs_service" "test-service" {
   }
 
   iam_role = ""
+  # oak9: aws_ecs_service.iam_role is not configured
   depends_on = [aws_alb_listener.testapp, aws_iam_role_policy_attachment.ecs_task_execution_role]
 
   # ServiceRegistries.ContainerName /already in task defination
