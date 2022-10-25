@@ -46,6 +46,7 @@ resource "aws_api_gateway_integration" "foo" {
   cache_key_parameters    = ["method.request.path.param"]
   cache_namespace         = "foobar"
   timeout_milliseconds    = 29000               # Must be configured
+  # oak9: aws_api_gateway_integration.timeout_milliseconds is not configured
   passthrough_behavior    = "WHEN_NO_TEMPLATES" # Must be configured
   content_handling        = "CONVERT_TO_TEXT"
 
