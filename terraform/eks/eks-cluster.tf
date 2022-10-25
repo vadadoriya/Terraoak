@@ -35,6 +35,7 @@ resource "aws_iam_role_policy_attachment" "demo-cluster-AmazonEKSVPCResourceCont
 }
 
 resource "aws_eks_cluster" "demo" {
+  # oak9: aws_eks_cluster.version is not configured
   name     = var.cluster-name
   role_arn = aws_iam_role.demo-cluster.arn
 
