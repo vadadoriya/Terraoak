@@ -78,6 +78,7 @@ resource "aws_elasticsearch_domain" "es" {
 
   snapshot_options {
       automated_snapshot_start_hour = 23
+  # oak9: aws_elasticsearch_domain.snapshot_options.automated_snapshot_start_hour is not set to define the time in UTC when daily automatic snapshots are taken
   }
 
   tags = {
