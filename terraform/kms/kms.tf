@@ -29,7 +29,7 @@ resource "aws_kms_key" "foo_kms" {
 POLICY
 }
 
-resource "aws_kms_alias" "foo" {
+resource "aws_kms_alias" "foo_kms" {
   # All options # Must be configured
   name          = "alias/bar"
   target_key_id = aws_kms_key.foo_kms.id
