@@ -47,6 +47,7 @@ resource "aws_eks_cluster" "demo" {
 
   vpc_config {
     security_group_ids = []
+    # oak9: aws_eks_cluster.vpc_config.security_group_ids does not have VPC security groups defined for secure access control
     subnet_ids         = aws_subnet.demo[*].id
   }
 
