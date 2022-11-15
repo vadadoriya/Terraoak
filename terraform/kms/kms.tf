@@ -18,7 +18,9 @@ resource "aws_kms_key" "foo_kms" {
       ],
       "Effect": "Allow",
       "Principal": {
-        "*"
+        "AWS": [
+          "*"
+        ]
       },
       "Resource": [
         "*"
