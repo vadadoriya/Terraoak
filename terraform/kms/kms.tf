@@ -14,31 +14,11 @@ resource "aws_kms_key" "foo_kms" {
   "Statement": [
     {
       "Action": [
-        "kms:*",
-        "kms:Describe*",
-        "kms:Enable*",
-        "kms:List*",
-        "kms:Put*",
-        "kms:Update*",
-        "kms:Revoke*",
-        "kms:Disable*",
-        "kms:Get*",
-        "kms:Delete*",
-        "kms:TagResource",
-        "kms:UntagResource",
-        "kms:ScheduleKeyDeletion",
-        "kms:CancelKeyDeletion",
-        "kms:Encrypt",
-        "kms:Decrypt",
-        "kms:ReEncrypt*",
-        "kms:GenerateDataKey*",
-        "kms:DescribeKey"
+        "*"
       ],
       "Effect": "Allow",
       "Principal": {
-        "AWS": [
-          "arn:aws:iam::111122223333:user/Alice"
-        ]
+        "*"
       },
       "Resource": [
         "*"
