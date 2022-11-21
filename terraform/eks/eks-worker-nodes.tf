@@ -33,6 +33,7 @@ resource "aws_iam_role_policy_attachment" "demo-node-AmazonEC2ContainerRegistryR
 }
 
 resource "aws_eks_node_group" "demo" {
+  # oak9: eks.nodegroup[0].subnets is not configured
   # oak9: aws_eks_node_group.tags is not configured
   cluster_name    = aws_eks_cluster.demo.name
   node_group_name = "demo"
