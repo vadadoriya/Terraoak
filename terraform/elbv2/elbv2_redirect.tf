@@ -65,6 +65,7 @@ resource "aws_lb_listener_rule" "redirect-rule" {
       path = "/#{path}"
       port = "34" 
       protocol    = "HTTPS" # Must be configured
+      # oak9: aws_lb_listener_rule.action.redirect.protocol is not configured
       status_code = "HTTP_301"
       query       = "#{query}"
     }
